@@ -1,0 +1,12 @@
+{
+  "num_mip_levels": 4,
+  "resource_pack_name": "Create rp",
+  "texture_data": {
+    "cogwheel": {
+      "textures": "textures/blocks/cogwheel"
+    },
+    "invisible": {
+      "textures": "textures/blocks/invisible"
+    }
+  }
+}
