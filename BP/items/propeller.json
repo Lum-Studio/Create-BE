@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "propeller"
-            },
-            "minecraft:display_name": {
-                "value": "Propeller"
             }
         }
     }
