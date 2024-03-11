@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "create:andesite_casing",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:flammable": false,
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": true,
+      "minecraft:geometry": {
+        "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.5
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "andesite_casing",
+          "render_method": "opaque"
+        }
+      }
+    },
+    "events": {}
+  }
+}
