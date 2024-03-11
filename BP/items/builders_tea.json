@@ -10,15 +10,10 @@
         "components": {
             "minecraft:icon": {
                 "texture": "builders_tea"
-            },
-            "minecraft:display_name": {
-                "value": "Builders Tea"
-            },
-
+            }
             "minecraft:max_stack_size": {
                 "value": 16
             },
-
             "minecraft:food": {
                 "can_always_eat": false,
                 "nutrition": 1,

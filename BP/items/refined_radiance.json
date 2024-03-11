@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "refined_radiance"
-            },
-            "minecraft:display_name": {
-                "value": "Refined Radiance"
             }
         }
     }

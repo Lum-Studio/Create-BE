@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "experience_nugget"
-            },
-            "minecraft:display_name": {
-                "value": "Experience Nugget"
             }
         }
     }

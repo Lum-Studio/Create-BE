@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "belt_connector"
-            },
-            "minecraft:display_name": {
-                "value": "Belt Connector"
             }
         }
     }

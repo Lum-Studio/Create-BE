@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "copper_sheet"
-            },
-            "minecraft:display_name": {
-                "value": "Copper Sheet"
             }
         }
     }

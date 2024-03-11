@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "andesite_alloy"
-            },
-            "minecraft:display_name": {
-                "value": "Andesite Alloy"
             }
         }
     }

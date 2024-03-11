@@ -11,9 +11,6 @@
             "minecraft:icon": {
                 "texture": "honeyed_apple"
             },
-            "minecraft:display_name": {
-                "value": "Honeyed Apple"
-            },
             "minecraft:food": {
                 "nutrition": 8,
                 "saturation_modifier": 12.8

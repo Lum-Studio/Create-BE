@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "golden_sheet"
-            },
-            "minecraft:display_name": {
-                "value": "Golden Sheet"
             }
         }
     }

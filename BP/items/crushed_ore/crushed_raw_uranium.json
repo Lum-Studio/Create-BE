@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "crushed_raw_uranium"
-            },
-            "minecraft:display_name": {
-                "value": "Crushed Raw Uranium"
             }
         }
     }

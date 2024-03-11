@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "lapis_sheet"
-            },
-            "minecraft:display_name": {
-                "value": "Lapis Sheet"
             }
         }
     }
