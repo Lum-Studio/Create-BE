@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "electron_tube"
-            },
-            "minecraft:display_name": {
-                "value": "Electron Tube"
             }
         }
     }
