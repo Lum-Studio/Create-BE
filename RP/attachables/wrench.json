@@ -24,7 +24,8 @@
           {"wield_first_person": "c.is_first_person"}
         ]
       },
-      "render_controllers": [ "controller.render.item_no_enchants" ]
+      "render_controllers": [ "controller.render.item_no_enchants" ],
+      "item": "create:wrench_item"
     }
   }
 }
