@@ -1,0 +1,52 @@
+{
+    "format_version": 2,
+    "metadata": {
+        "authors": ["unschlagbar", "Node", "GOOFY"],
+        "generated_with": {
+            "bridge": ["2.6.0"],
+            "dash": ["0.10.8"],
+            "blockbench": ["4.7.2"]
+        },
+        "license": "GNU",
+        "url": "https://github.com/kumja1/Create-BE"
+    },
+    "header": {
+        "name": "Create",
+        "description": "Create Bedrock edition",
+        "min_engine_version": [1, 19, 80],
+        "uuid": "de80a42b-d04b-43cf-a311-101167646acc",
+        "version": [1, 0, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "b2a30114-c83a-41f4-85d9-3e65d76fda34",
+            "version": [1, 0, 0]
+        },
+        {
+            "version": [
+                1,
+                0,
+                0
+            ],
+            "uuid": "63842f66-acd7-4874-8557-b3d5fa1d3c47",
+            "type": "script",
+            "language": "javascript",
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "75fc8053-b52e-4add-aa77-68ce70fa6204",
+            "version": [1, 0, 0]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.11.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "1.2.0-beta"
+        }
+    ]
+}
