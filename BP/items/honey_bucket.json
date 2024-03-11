@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "honey_bucket"
-            },
-            "minecraft:display_name": {
-                "value": "Honey Bucket"
             }
         }
     }

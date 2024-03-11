@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "iron_sheet"
-            },
-            "minecraft:display_name": {
-                "value": "Iron Sheet"
             }
         }
     }

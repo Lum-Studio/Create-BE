@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "wheat_flour"
-            },
-            "minecraft:display_name": {
-                "value": "Wheat Flour"
             }
         }
     }

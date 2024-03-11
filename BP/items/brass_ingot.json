@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "brass_ingot"
-            },
-            "minecraft:display_name": {
-                "value": "Brass Ingot"
             }
         }
     }

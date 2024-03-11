@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "super_glue"
-            },
-            "minecraft:display_name": {
-                "value": "Super Glue"
             }
         }
     }
