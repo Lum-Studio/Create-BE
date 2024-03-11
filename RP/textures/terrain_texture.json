@@ -8,6 +8,18 @@
     "cogwheel": {
       "textures": "textures/blocks/cogwheel"
     },
+    "creative_casing": {
+      "textures": "textures/blocks/creative_casing"
+    },
+    "creative_motor": {
+      "textures": "textures/blocks/creative_motor"
+    },
+    "creative_motor_base": {
+      "textures": "textures/blocks/creative_motor_base"
+    },
+    "creative_motor_extra": {
+      "textures": "textures/blocks/creative_motor_extra"
+    },
     "invisible": {
       "textures": "textures/blocks/invisible"
     }
