@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "blaze_cake"
-            },
-            "minecraft:display_name": {
-                "value": "Blaze Cake"
             }
         }
     }
