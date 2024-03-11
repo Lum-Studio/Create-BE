@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "create:builders_tea",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "builders_tea"
+            },
+            "minecraft:display_name": {
+                "value": "Builders Tea"
+            }
+        }
+    }
+}

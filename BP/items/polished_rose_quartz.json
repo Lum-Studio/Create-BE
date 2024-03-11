@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "create:polished_rose_quartz",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "polished_rose_quartz"
+            },
+            "minecraft:display_name": {
+                "value": "Polished Rose Quartz"
+            }
+        }
+    }
+}

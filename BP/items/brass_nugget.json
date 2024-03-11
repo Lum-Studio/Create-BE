@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "create:brass_nugget",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "brass_nugget"
+            },
+            "minecraft:display_name": {
+                "value": "Brass Nugget"
+            }
+        }
+    }
+}

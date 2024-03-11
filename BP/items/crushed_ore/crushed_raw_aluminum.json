@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "create:crushed_raw_aluminum",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "crushed_raw_aluminum"
+            },
+            "minecraft:display_name": {
+                "value": "Crushed Raw Aluminum"
+            }
+        }
+    }
+}

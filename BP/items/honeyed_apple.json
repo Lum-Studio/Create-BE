@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "create:honeyed_apple",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "honeyed_apple"
+            },
+            "minecraft:display_name": {
+                "value": "Honeyed Apple"
+            }
+        }
+    }
+}

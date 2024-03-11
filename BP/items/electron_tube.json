@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "create:electron_tube",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "electron_tube"
+            },
+            "minecraft:display_name": {
+                "value": "Electron Tube"
+            }
+        }
+    }
+}

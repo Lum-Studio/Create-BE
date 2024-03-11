@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "create:blaze_cake_base",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "blaze_cake_base"
+            },
+            "minecraft:display_name": {
+                "value": "Blaze Cake Base"
+            }
+        }
+    }
+}

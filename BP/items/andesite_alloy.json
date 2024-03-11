@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "create:andesite_alloy",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "andesite_alloy"
+            },
+            "minecraft:display_name": {
+                "value": "Andesite Alloy"
+            }
+        }
+    }
+}

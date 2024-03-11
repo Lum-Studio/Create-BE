@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "create:golden_sheet",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "golden_sheet"
+            },
+            "minecraft:display_name": {
+                "value": "Golden Sheet"
+            }
+        }
+    }
+}
