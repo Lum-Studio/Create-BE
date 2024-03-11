@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "dough"
-            },
-            "minecraft:display_name": {
-                "value": "Dough"
             }
         }
     }
