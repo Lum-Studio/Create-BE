@@ -7,7 +7,7 @@
         "default": "entity_alphatest"
       },
       "textures": {
-        "default": "textures/items/model_wrench"
+        "default": "textures/items/wrench_model"
       },
       "geometry": {
         "default": "geometry.create.wrench"
