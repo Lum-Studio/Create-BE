@@ -5,6 +5,9 @@
     "andesite_casing": {
       "textures": "textures/blocks/andesite_casing"
     },
+    "axis": {
+      "textures": "textures/blocks/axis"
+    },
     "cogwheel": {
       "textures": "textures/blocks/cogwheel"
     },
