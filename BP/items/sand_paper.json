@@ -23,9 +23,6 @@
       },
       "minecraft:icon": {
         "texture": "sand_paper"
-      },
-      "minecraft:display_name": {
-        "value": "Sand Paper"
       }
     }
   }
