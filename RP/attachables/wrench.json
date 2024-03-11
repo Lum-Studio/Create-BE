@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "create:wrench",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/items/model_wrench"
+      },
+      "geometry": {
+        "default": "geometry.create.wrench"
+      },
+      "animations": {
+        "wield_3rd_person": "animation.create.wrench.wield_3rd_person",
+        "wield_first_person": "animation.create.wrench.wield_first_person",
+        "gear": "animation.create.wrench.gear"
+      },
+      "scripts": {
+        "animate": [
+          "gear",
+          {"wield_3rd_person": "!c.is_first_person"},
+          {"wield_first_person": "c.is_first_person"}
+        ]
+      },
+      "render_controllers": [ "controller.render.item_no_enchants" ]
+    }
+  }
+}
