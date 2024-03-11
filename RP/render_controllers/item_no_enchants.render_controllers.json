@@ -1,0 +1,10 @@
+{
+  "format_version": "1.20.0",
+  "render_controllers": {
+    "controller.render.item_no_enchants": {
+      "geometry": "geometry.default",
+      "materials": [ { "*": "material.default" } ],
+      "textures": [ "texture.default" ]
+    }
+  }
+}

@@ -2,6 +2,9 @@
   "num_mip_levels": 4,
   "resource_pack_name": "Create rp",
   "texture_data": {
+    "andesite_casing": {
+      "textures": "textures/blocks/andesite_casing"
+    },
     "cogwheel": {
       "textures": "textures/blocks/cogwheel"
     },

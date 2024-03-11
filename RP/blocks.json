@@ -1,0 +1,9 @@
+{
+  "format_version": [1, 0, 0],
+  "create:andesite_casing": {
+    "sound": "metal"
+  },
+  "create:cogwheel": {
+    "sound": "wood"
+  }
+}

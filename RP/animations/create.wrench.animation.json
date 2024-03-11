@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.create.wrench.wield_3rd_person": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"rotation": [90, 0, 0],
+					"position": [0, 21, 3]
+				}
+			}
+		},
+		"animation.create.wrench.wield_first_person": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"rotation": [65, 60, -70],
+					"position": [-1.25, 29.75, -0.5]
+				}
+			}
+		},
+		"animation.create.wrench.gear": {
+			"loop": true,
+			"bones": {
+				"gear": {
+					"rotation": [0, "query.anim_time * -10", 0]
+				}
+			}
+		}
+	}
+}
