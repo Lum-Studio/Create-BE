@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "brass_nugget"
-            },
-            "minecraft:display_name": {
-                "value": "Brass Nugget"
             }
         }
     }
