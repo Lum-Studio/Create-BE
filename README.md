@@ -1,2 +1,2 @@
 # ValkyrienSkies-BE
-Port of Valkyrien Skies
+Port of the Create mod
