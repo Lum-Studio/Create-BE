@@ -13,6 +13,25 @@
             },
             "minecraft:display_name": {
                 "value": "Builders Tea"
+            },
+
+            "minecraft:max_stack_size": {
+                "value": 16
+            },
+
+            "minecraft:food": {
+                "can_always_eat": false,
+                "nutrition": 1,
+                "saturation_modifier": 1.2
+            }
+        },
+        "events": {
+            "on_consume": {
+                "add_mob_effect": {
+                    "amplifier": 3,
+                    "effect": "haste",
+                    "duration": 180
+                }
             }
         }
     }

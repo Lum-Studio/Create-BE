@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "create:shaft",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"create:placed": [
+					false,
+					true
+				],
+				"create:placing_axis": [
+					0,
+					1,
+					2
+				]
+			}
+		}
+	}
+}
