@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "polished_rose_quartz"
-            },
-            "minecraft:display_name": {
-                "value": "Polished Rose Quartz"
             }
         }
     }
