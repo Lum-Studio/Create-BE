@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "copper_ingot"
-            },
-            "minecraft:display_name": {
-                "value": "Copper Ingot"
             }
         }
     }
