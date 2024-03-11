@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "whisk"
-            },
-            "minecraft:display_name": {
-                "value": "Whisk"
             }
         }
     }
