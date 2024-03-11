@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "crushed_raw_lead"
-            },
-            "minecraft:display_name": {
-                "value": "Crushed Raw Lead"
             }
         }
     }
