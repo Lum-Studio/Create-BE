@@ -10,9 +10,6 @@
         "components": {
             "minecraft:icon": {
                 "texture": "zinc_ingot"
-            },
-            "minecraft:display_name": {
-                "value": "Zinc Ingot"
             }
         }
     }
