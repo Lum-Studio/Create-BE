@@ -1,0 +1,29 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Port of the Create Mod",
+        "name": "Create-BE",
+        "uuid": "1ad4bc69-7018-4c3c-b069-5b05228451bd",
+        "min_engine_version": [
+            1,
+            20,
+            40
+        ],
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "6322db50-f8eb-441f-9246-57b073ef62da",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}
