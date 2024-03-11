@@ -4,6 +4,9 @@
   "texture_data": {
     "cogwheel": {
       "textures": "textures/blocks/cogwheel"
+    },
+    "invisible": {
+      "textures": "textures/blocks/invisible"
     }
   }
 }
