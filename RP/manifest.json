@@ -1,0 +1,29 @@
+{
+    "format_version": 2,
+    "metadata": {
+        "authors": ["unschlagbar", "Node", "GOOFY"],
+        "generated_with": {
+            "blockbench": ["4.7.2"]
+        }
+    },
+    "header": {
+        "name": "Create",
+        "description": "Create Bedrock edition",
+        "min_engine_version": [1, 19, 60],
+        "uuid": "75fc8053-b52e-4add-aa77-68ce70fa6204",
+        "version": [1, 0, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "61e429bd-a66d-479f-bd87-7d8a64fa72bd",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "de80a42b-d04b-43cf-a311-101167646acc",
+            "version": [1, 0, 0]
+        }
+    ]
+}
