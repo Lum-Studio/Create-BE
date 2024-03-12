@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "brass_nugget"
+                "textures": { 
+                    "default": "brass_nugget" 
+                }
             }
         }
     }
