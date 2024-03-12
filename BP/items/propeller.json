@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "propeller"
+                "textures": { 
+                    "default": "propeller" 
+                }
             }
         }
     }
