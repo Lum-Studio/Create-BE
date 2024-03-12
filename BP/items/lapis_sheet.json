@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "lapis_sheet"
+                "textures": { 
+                    "default": "lapis_sheet" 
+                }
             }
         }
     }
