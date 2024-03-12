@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "polished_rose_quartz"
+                "textures": { 
+                    "default": "polished_rose_quartz" 
+                }
             }
         }
     }
