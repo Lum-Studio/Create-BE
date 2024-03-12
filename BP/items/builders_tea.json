@@ -10,7 +10,7 @@
         "components": {
             "minecraft:icon": {
                 "texture": "builders_tea"
-            }
+            },
             "minecraft:max_stack_size": {
                 "value": 16
             },
