@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "refined_radiance"
+                "textures": { 
+                    "default": "refined_radiance" 
+                }
             }
         }
     }
