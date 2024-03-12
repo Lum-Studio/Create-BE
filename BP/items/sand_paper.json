@@ -22,7 +22,9 @@
         "movement_modifier": 0
       },
       "minecraft:icon": {
-        "texture": "sand_paper"
+        "textures": { 
+          "default": "sand_paper" 
+        }
       }
     }
   }
