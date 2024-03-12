@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "super_glue"
+                "textures": { 
+                    "default": "super_glue" 
+                }
             }
         }
     }
