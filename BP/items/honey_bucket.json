@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "honey_bucket"
+                "textures": { 
+                    "default": "honey_bucket" 
+                }
             }
         }
     }
