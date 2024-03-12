@@ -7,6 +7,7 @@
         "category": "items"
       }
     },
+    
     "components": {
       "minecraft:flammable": false,
       "minecraft:map_color": "#FFFFFF",

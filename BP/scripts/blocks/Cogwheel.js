@@ -1,0 +1,7 @@
+
+class Cogwheel {
+
+    constructor(entity) {
+
+    }
+}
