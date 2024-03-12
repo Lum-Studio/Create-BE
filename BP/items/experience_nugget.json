@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "experience_nugget"
+                "textures": { 
+                    "default": "experience_nugget" 
+                }
             }
         }
     }
