@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "blaze_cake_base"
+                "textures": { 
+                    "default": "blaze_cake_base" 
+                }
             }
         }
     }
