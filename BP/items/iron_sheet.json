@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "iron_sheet"
+                "textures": { 
+                    "default": "iron_sheet" 
+                }
             }
         }
     }
