@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "belt_connector"
+                "textures": { 
+                    "default": "belt_connector" 
+                }
             }
         }
     }
