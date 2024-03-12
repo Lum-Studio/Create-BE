@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "red_sand_paper"
+                "textures": { 
+                    "default": "red_sand_paper" 
+                }
             }
         }
     }
