@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "copper_sheet"
+                "textures": { 
+                    "default": "copper_sheet" 
+                }
             }
         }
     }
