@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "crushed_raw_tin"
+                "textures": { 
+                    "default": "crushed_raw_tin"
+                }
             }
         }
     }
