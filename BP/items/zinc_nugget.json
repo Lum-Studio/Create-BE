@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "zinc_nugget"
+                "textures": { 
+                    "default": "zinc_nugget" 
+                }
             }
         }
     }
