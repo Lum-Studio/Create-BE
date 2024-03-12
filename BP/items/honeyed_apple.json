@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "honeyed_apple"
+                "textures": { 
+                    "default": "honeyed_apple" 
+                }
             },
             "minecraft:food": {
                 "nutrition": 8,
