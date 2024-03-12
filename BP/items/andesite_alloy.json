@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "andesite_alloy"
+                "textures": { 
+                    "default": "andesite_alloy" 
+                }
             }
         }
     }
