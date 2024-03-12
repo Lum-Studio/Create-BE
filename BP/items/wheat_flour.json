@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "wheat_flour"
+                "textures": { 
+                    "default": "wheat_flour" 
+                }
             }
         }
     }
