@@ -9,7 +9,9 @@
         },
         "components": {
             "minecraft:icon": {
-                "texture": "cinder_flour"
+                "textures": { 
+                    "default": "cinder_flour" 
+                }
             }
         }
     }
