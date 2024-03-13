@@ -4,7 +4,7 @@
         "description": {
             "identifier": "create:cogwheel",
             "materials": {
-                "default": "kinetic_block_entity"
+                "default": "terrain_opaque"
             },
             "geometry": {
                 "default": "geometry.tile.cogwheel"
