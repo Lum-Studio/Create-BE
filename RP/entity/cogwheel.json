@@ -17,13 +17,13 @@
             ],
             "animations": {
                 "position": "animation.tile_entity.position",
-                "rotation": "animation.shaft.rotation",
+                "placement_axis": "animation.shaft.rotation",
                 "rpm":"animation.kinetic_block_entity.rotation"
             },
             "scripts": {
                 "animate": [
                     "position",
-                    "rotation",
+                    "placement_axis",
                     "rpm"
                 ]
             },
