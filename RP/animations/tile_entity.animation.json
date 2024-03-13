@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.tile_entity.position": {
+			"loop": true,
+			"bones": {
+				"main": {
+					"position": [0, -0.125, 0]
+				}
+			}
+		}
+	}
+}
