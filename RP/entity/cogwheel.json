@@ -18,13 +18,13 @@
             "animations": {
                 "position": "animation.tile_entity.position",
                 "placement_axis": "animation.shaft.rotation",
-                "rpm":"animation.kinetic_block_entity.rotation"
+                "rotation":"animation.kinetic_block_entity.rotation"
             },
             "scripts": {
                 "animate": [
                     "position",
                     "placement_axis",
-                    "rpm"
+                    "rotation"
                 ]
             },
             "enable_attachables": false
