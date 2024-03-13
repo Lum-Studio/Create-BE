@@ -4,7 +4,7 @@
         "description": {
             "identifier": "create:cogwheel",
             "properties": {
-                "create:placement_rotation": {
+                "create:placement_axis": {
                     "type": "int",
                     "range": [0,2],
                     "default": 0,
@@ -67,17 +67,17 @@
             },
             "create:set_axisy": {
                 "set_property": {
-                    "create:placement_rotation": 0
+                    "create:placement_axis": 0
                 }
             },
             "create:set_axisz": {
                 "set_property": {
-                    "create:placement_rotation": 1
+                    "create:placement_axis": 1
                 }
             },
             "create:set_axisx": {
                 "set_property": {
-                    "create:placement_rotation": 2
+                    "create:placement_axis": 2
                 }
             }
         }
