@@ -1,0 +1,33 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "create:cogwheel",
+            "materials": {
+                "default": "kinetic_block_entity"
+            },
+            "geometry": {
+                "default": "geometry.tile.cogwheel"
+            },
+            "textures": {
+                "default": "textures/blocks/cogwheel"
+            },
+            "render_controllers": [
+                "controller.render.cow"
+            ],
+            "animations": {
+                "position": "animation.tile_entity.position",
+                "rotation": "animation.shaft.rotation",
+                "rpm":"animation.kinetic_block_entity.rotation"
+            },
+            "scripts": {
+                "animate": [
+                    "position",
+                    "rotation",
+                    "rpm"
+                ]
+            },
+            "enable_attachables": false
+        }
+    }
+}
