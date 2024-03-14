@@ -43,6 +43,45 @@
       "copper_sheet": {
          "textures": "textures/items/copper_sheet"
       },
+      "crushed_raw_aluminum": {
+         "textures": "textures/items/crushed_ore/crushed_raw_aluminum"
+      },
+      "crushed_raw_copper": {
+         "textures": "textures/items/crushed_ore/crushed_raw_copper"
+      },
+      "crushed_raw_gold": {
+         "textures": "textures/items/crushed_ore/crushed_raw_gold"
+      },
+      "crushed_raw_iron": {
+         "textures": "textures/items/crushed_ore/crushed_raw_iron"
+      },
+      "crushed_raw_lead": {
+         "textures": "textures/items/crushed_ore/crushed_raw_lead"
+      },
+      "crushed_raw_nickel": {
+         "textures": "textures/items/crushed_ore/crushed_raw_nickel"
+      },
+      "crushed_raw_osmium": {
+         "textures": "textures/items/crushed_ore/crushed_raw_osmium"
+      },
+      "crushed_raw_platinum": {
+         "textures": "textures/items/crushed_ore/crushed_raw_platinum"
+      },
+      "crushed_raw_quicksilver": {
+         "textures": "textures/items/crushed_ore/crushed_raw_quicksilver"
+      },
+      "crushed_raw_silver": {
+         "textures": "textures/items/crushed_ore/crushed_raw_silver"
+      },
+      "crushed_raw_tin": {
+         "textures": "textures/items/crushed_ore/crushed_raw_tin"
+      },
+      "crushed_raw_uranium": {
+         "textures": "textures/items/crushed_ore/crushed_raw_uranium"
+      },
+      "crushed_raw_zinc": {
+         "textures": "textures/items/crushed_ore/crushed_raw_zinc"
+      },
       "dough": {
          "textures": "textures/items/dough"
       },
