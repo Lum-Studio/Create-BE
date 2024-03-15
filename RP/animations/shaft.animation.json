@@ -1,0 +1,21 @@
+{
+	"format_version": "1.20.60",
+	"animations": {
+		"animation.shaft.rotation": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"main": {
+					"rotation": ["query.property('create:placement_axis') != 0 ? 90", "query.property('create:placement_axis') == 2 ? 90", 0]
+				}
+			}
+		},
+		"animation.shaft.2d_rotation": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"main": {
+					"rotation": [90, "query.property('create:placement_axis') == 2 ? 90", 0]
+				}
+			}
+		}
+	}
+}
