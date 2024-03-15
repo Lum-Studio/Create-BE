@@ -2,7 +2,7 @@
     "format_version": "1.20.60",
     "minecraft:item": {
         "description": {
-            "identifier": "create:wrench_item",
+            "identifier": "create:wrench",
             "menu_category": {
                 "category": "items"
             }
