@@ -1,0 +1,38 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "create:mechanical_press",
+            "materials": {
+                "default": "moving_block"
+            },
+            "geometry": {
+                "default": "geometry.mechanical_press_head"
+            },
+            "textures": {
+                "default": "textures/entity/mechanical_press_head"
+            },
+            "render_controllers": [
+                "controller.render.cow"
+            ],
+            "animations": {
+                "position": "animation.tile_entity.position",
+                "placement_axis": "animation.mechanical_press_head.placement_rotation",
+                "rotation":"animation.mechanical_press.rotation",
+                "press": "animation.mechanical_press_head"
+            },
+            "scripts": {
+                "animate": [
+                    "placement_axis",
+                    "position",
+                    "rotation",
+                    "press"
+                ],
+                "pre_animation": [
+                    "variable.getrunningtickspeed = math.lerp(1, 60, math.abs(query.property('create:speed')) / 512);"
+                ]
+            },
+            "enable_attachables": false
+        }
+    }
+}
