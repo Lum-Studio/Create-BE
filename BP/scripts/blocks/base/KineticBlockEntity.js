@@ -1,16 +1,22 @@
-import { Block } from "@minecraft/server"
+import { Block, Entity } from "@minecraft/server"
 
-export class KineticBlockEntity {
+export default class KineticBlockEntity {
     /**
      * 
      * @param {Block} block 
+     * @param {Entity} entity
      */
-    constructor(block) {
-        this.entity = block.dimension.getEntities({location:block.center()})[0];
-        this.speed = this?.entity?.getProperty('create:speed') ?? 0
+    constructor(block, entity) {
+        this.block = block;
+        this.entity = entity;
+        this.speed = this.entity.getProperty('create:speed');
     }
 
+    get network() {
+        return this.entity.getDynamicProperty("network");
+    }
 
-
-
+    set network(id) {
+        this.entity.setDynamicProperty("network", id);
+    }
 }
