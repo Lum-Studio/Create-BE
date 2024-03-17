@@ -1,5 +1,6 @@
 import { world, system } from "@minecraft/server";
-import { Cogwheel } from "../Cogwheel";
+import Cogwheel from "../Cogwheel";
+import { KineticInstances } from "../kineticInstancen";
 
 world.afterEvents.playerPlaceBlock.subscribe(({block, dimension}) => {
     switch (block.typeId) {
@@ -26,7 +27,9 @@ world.beforeEvents.playerBreakBlock.subscribe(({block, dimension}) => {
 world.afterEvents.entitySpawn.subscribe(({entity}) => {
     switch (entity.typeId) {
         case "create:cogwheel":
-            new Cogwheel(entity).init();
+            const be = new Cogwheel(entity);
+            be.init();
+            KineticInstances.add(entity.dimension, be.block.location, be);
             break;
     }
 });
