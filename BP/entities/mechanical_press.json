@@ -1,0 +1,76 @@
+{
+    "format_version": "1.20.60",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "create:mechanical_press",
+            "properties": {
+                "create:placement_axis": {
+                    "type": "int",
+                    "range": [1,2],
+                    "default": 1,
+                    "client_sync": true
+                },
+                "create:speed": {
+                    "type": "float",
+                    "range": [-256.0 , 256.0],
+                    "default": 0.0,
+                    "client_sync": true
+                },
+                "create:rotation_offset": {
+                    "type": "int",
+                    "client_sync": true,
+                    "default": 0,
+                    "range": [0, 22]
+                },
+                "create:runningticks": {
+                    "type": "float",
+                    "client_sync": true,
+                    "default": 0.00,
+                    "range": [0.00, 240.00]
+                }
+            },
+            "is_spawnable": false,
+            "is_summonable": true
+        },
+        "component_groups": {
+            "create:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:health": {
+                "value": 1,
+                "max": 1,
+                "min": 1
+            },
+            "minecraft:type_family": {
+                "family": ["inanimate"]
+            },
+            "minecraft:fire_immune": {},
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "max_dropped_ticks": 20,
+                    "use_motion_prediction_hints": false,
+                    "max_optimized_distance": 0
+                }
+            }
+        },
+        "events": {
+            "create:despawn": {
+                "add": {
+                    "component_groups": [
+                        "create:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

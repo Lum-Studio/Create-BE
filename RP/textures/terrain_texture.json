@@ -1,6 +1,6 @@
 {
   "num_mip_levels": 4,
-  "resource_pack_name": "Create rp",
+  "resource_pack_name": "Create",
   "texture_data": {
     "andesite_casing": {
       "textures": "textures/blocks/andesite_casing"
@@ -10,6 +10,9 @@
     },
     "cogwheel": {
       "textures": "textures/blocks/cogwheel"
+    },
+    "cogwheel_axis": {
+      "textures": "textures/blocks/cogwheel_axis"
     },
     "creative_casing": {
       "textures": "textures/blocks/creative_casing"
@@ -23,8 +26,35 @@
     "creative_motor_extra": {
       "textures": "textures/blocks/creative_motor_extra"
     },
+    "gearbox": {
+      "textures": "textures/blocks/gearbox"
+    },
+    "gearbox_top": {
+      "textures": "textures/blocks/gearbox_top"
+    },
     "invisible": {
       "textures": "textures/blocks/invisible"
+    },
+    "large_cogwheel": {
+      "textures": "textures/blocks/large_cogwheel"
+    },
+    "mechanical_press_axis": {
+      "textures": "textures/blocks/mechanical_press/mechanical_press_axis"
+    },
+    "mechanical_press_bottom" : {
+      "textures": "textures/blocks/mechanical_press/mechanical_press_bottom"
+    },
+    "mechanical_press_head": {
+      "textures": "textures/blocks/mechanical_press/mechanical_press_head"
+    },
+    "mechanical_press_pole": {
+      "textures": "textures/blocks/mechanical_press/mechanical_press_pole"
+    },
+    "mechanical_press_side" : {
+      "textures": "textures/blocks/mechanical_press/mechanical_press_side"
+    },
+    "mechanical_press_top" : {
+      "textures": "textures/blocks/mechanical_press/mechanical_press_top"
     }
   }
 }
