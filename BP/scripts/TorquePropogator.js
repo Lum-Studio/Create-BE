@@ -1,4 +1,3 @@
-import { world } from "@minecraft/server";
 import KineticBlockEntity from "./blocks/base/KineticBlockEntity";
 import KineticNetwork from "./KineticNetwork";
 
