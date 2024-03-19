@@ -1,0 +1,23 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "create:cogwheel"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "SP"
+        ],
+        "key": {
+            "S": {"item": "create:shaft"},
+            "P": {"tag": "minecraft:planks"}
+        },
+        "unlock": [
+            {"item": "create:shaft"}
+        ],
+        "result": {
+            "item": "create:cogwheel"
+        },
+        "priority": -1
+    }
+}

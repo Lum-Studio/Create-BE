@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+        "identifier": "minecraft:wrench"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "GG",
+            "GC",
+            " S"
+        ],
+        "key": {
+            "G": {"item": "create:golden_sheet"},
+            "C": {"item": "create:cogwheel"},
+            "S": {"item": "minecraft:stick"}
+        },
+        "unlock": [
+            {"item": "create:cogwheel"},
+            {"item": "create:golden_sheet"}
+        ],
+        "result": {
+            "item": "create:wrench"
+        },
+        "priority": -1
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "create:brass_nugget"
+        },
+    
+        "tags": ["crafting_table"],
+        "pattern": [
+            "#"
+        ],
+        "key": {
+            "#": {"item": "create:brass_ingot"}
+        },
+        "unlock": [
+            {"item": "create:brass_ingot"}
+        ],
+        "result": {
+            "item": "create:brass_nugget",
+            "count": 9
+        },
+        "priority": -1
+    }
+}

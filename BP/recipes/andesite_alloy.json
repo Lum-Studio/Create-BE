@@ -1,0 +1,31 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "create:andesite_alloy"
+        },
+    
+        "tags": ["crafting_table"],
+        "pattern": [
+            "BA",
+            "AB"
+        ],
+        "key": {
+            "A": {
+                "item": "minecraft:stone",
+                "data": 5
+            },
+            "B": {"item": "minecraft:iron_nugget"}
+        },
+        "unlock": [
+            {
+              "item": "minecraft:stone",
+              "data": 5
+            }
+        ],
+        "result": {
+            "item": "create:andesite_alloy"
+        },
+        "priority": -1
+    }
+}

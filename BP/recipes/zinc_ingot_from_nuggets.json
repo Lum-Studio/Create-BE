@@ -1,0 +1,25 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "create:zinc_ingot_from_nuggets"
+        },
+    
+        "tags": ["crafting_table"],
+        "pattern": [
+            "###",
+            "###",
+            "###"
+        ],
+        "key": {
+            "#": {"item": "create:zinc_nugget"}
+        },
+        "unlock": [
+            {"item": "create:zinc_nugget"}
+        ],
+        "result": {
+            "item": "create:zinc_ingot"
+        },
+        "priority": -1
+    }
+}
