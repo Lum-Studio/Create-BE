@@ -1,0 +1,20 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "match_tools",
+                    "item": "minecraft:iron_pickaxe",
+                    "count": 1
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "create:raw_zinc"
+                }
+            ]
+        }
+    ]
+}
