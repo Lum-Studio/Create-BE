@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.60",
+  "format_version": "1.20.70",
   "minecraft:block": {
     "description": {
       "identifier": "create:andesite_casing",
@@ -21,14 +21,7 @@
       },
       "minecraft:destructible_by_explosion": {
         "explosion_resistance": 0.5
-      },
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "andesite_casing",
-          "render_method": "opaque"
-        }
       }
-    },
-    "events": {}
+    }
   }
 }
