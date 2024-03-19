@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20.70",
+  "minecraft:block": {
+    "description": {
+      "identifier": "create:deepslate_zinc_ore",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.ore"
+      }
+    },
+    
+    "components": {
+      "minecraft:flammable": false,
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": true,
+      "minecraft:geometry": {
+        "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 22
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3
+      },
+      "minecraft:loot": "loot_tables/zinc_ore.json"
+    }
+  }
+}
