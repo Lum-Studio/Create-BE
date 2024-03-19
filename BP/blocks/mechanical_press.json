@@ -6,7 +6,7 @@
             "menu_category": {
                 "category": "items"
             },
-            "properties": {
+            "states": {
                 "create:placed": [false, true],
                 "create:placing_axis":[1, 2]
             }
