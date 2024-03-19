@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.70",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "create:zinc_ore_feature"
+		},
+		"count": 12,
+		"replace_rules": [
+			{
+			    "places_block": "create:zinc_ore",
+			    "may_replace": [
+				    {
+				        "name": "minecraft:stone"
+				    }
+			    ]
+			},
+			{
+			    "places_block": "create:deepslate_zinc_ore",
+			    "may_replace": [
+				    {
+				        "name": "minecraft:deepslate"
+				    }
+			    ]
+			}
+		]
+	}
+}
