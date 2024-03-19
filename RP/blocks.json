@@ -1,9 +1,17 @@
 {
   "format_version": [1, 0, 0],
   "create:andesite_casing": {
-    "sound": "wood"
+    "sound": "wood",
+    "textures": "andesite_casing"
   },
   "create:cogwheel": {
     "sound": "wood"
+  },
+  "create:deepslate_zinc_ore": {
+    "sound": "deepslate",
+    "textures": "deepslate_zinc_ore"
+  },
+  "create:zinc_ore": {
+    "textures": "zinc_ore"
   }
 }
