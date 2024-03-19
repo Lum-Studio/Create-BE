@@ -26,6 +26,9 @@
     "creative_motor_extra": {
       "textures": "textures/blocks/creative_motor_extra"
     },
+    "deepslate_zinc_ore": {
+      "textures": "textures/blocks/deepslate_zinc_ore"
+    },
     "gearbox": {
       "textures": "textures/blocks/gearbox"
     },
@@ -55,6 +58,9 @@
     },
     "mechanical_press_top" : {
       "textures": "textures/blocks/mechanical_press/mechanical_press_top"
+    },
+    "zinc_ore": {
+      "textures": "textures/blocks/zinc_ore"
     }
   }
 }
