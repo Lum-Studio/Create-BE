@@ -1,5 +1,5 @@
 import { world } from "@minecraft/server";
-import { KineticInstances } from "./blocks/kineticInstancen";
+import KineticInstances from "./blocks/";
 
 world.beforeEvents.chatSend.subscribe(({sender, message, cancel}) => {
     if (message.startsWith("!")) {

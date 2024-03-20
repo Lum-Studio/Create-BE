@@ -1,8 +1,8 @@
 import KineticBlockEntity from "./blocks/base/KineticBlockEntity";
 import KineticNetwork from "./KineticNetwork";
 
-class TorquePropagator {
-    constructor() {};
+export default class TorquePropagator {
+    constructor() { };
     /**
      * 
      * @param {KineticBlockEntity} be
@@ -12,7 +12,7 @@ class TorquePropagator {
         const id = be.network;
         if (id !== undefined) {
             return KineticNetwork.load(id);
-        };
-    }
+        } else return new KineticNetwork();
 
+    }
 }

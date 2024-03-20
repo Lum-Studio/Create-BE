@@ -1,38 +1,51 @@
 import { world } from "@minecraft/server";
-
+import { vec3 } from "./Vector";
+import KineticBlockEntity from "./blocks/base/KineticBlockEntity";
 export default class KineticNetwork {
 
     static generateID() {
-        //I hope this is random enough
+        // I hope this is random enough
         return Math.round(Math.random() * 100000000);
     }
-
+    /**
+     * 
+     * @param {number} id 
+     * @returns {KineticNetwork} 
+     */
     static load(id) {
-        const data = world.getDynamicProperty(`net:${id}`);
+        const data = world.getDynamicProperty(`create:network_${id}`);
         if (data === undefined) {
-            return new_network = new KineticNetwork(id, new Set(), new Set());
+            return new KineticNetwork(id);
         };
 
         const network_data = JSON.parse(data);
         return new KineticNetwork(id, network_data.sources, network_data.members);
     }
-    
-    constructor(id, sources, members) {
+
+    constructor(id = KineticNetwork.generateID(), sources = new Set(), members = new Set()) {
         this.id = id;
-    
         this.sources = sources;
-        this.members = new members;
+        this.members = members;
+        this.currentCapacity;
+        this.currentStress;
     }
 
-    addMember(location) {
-        this.members.add(`x${location.x}y${location.y}z${location.z}`);
-    }
-
-    addSource(location) {
-        this.sources.add(`x${location.x}y${location.y}z${location.z}`);
+    /**
+     * 
+     * @param {KineticBlockEntity} be 
+     * @returns {void}
+     */
+    add(be) {
+        if (this.members.has(be))
+            return;
+        if (be.isSource)
+            sources.put(be, be.calculateAddedStressCapacity());
+        this.members.add(be, be.calculateStressApplied());
+        updateFromNetwork(be);
+        be.networkDirty = true;
     }
 
     save() {
-        world.setDynamicProperty(`net:${this.id}`, JSON.stringify(this));
+        world.setDynamicProperty(`create:network_${this.id}`, JSON.stringify(this));
     }
 }

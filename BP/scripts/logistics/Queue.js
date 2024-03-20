@@ -26,7 +26,7 @@ class StackQueue {
             while (!this.isStackEmpty()) {
                 const task = this.popStack()
                 this.runTask(task);
-                yield; // Yield after each task, this passes the execution of the next task to the next tick
+                yield; // Yield after each task, this spreads execution of task across ticks
             }
             yield; // Yield once stack is empty
         }

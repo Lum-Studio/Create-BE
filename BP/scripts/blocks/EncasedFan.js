@@ -1,33 +1,37 @@
-import { Block, MolangVariableMap, system } from "@minecraft/server";
+import { Entity, MolangVariableMap, system } from "@minecraft/server";
 import { KineticBlockEntity } from "./base/KineticBlockEntity";
 import { vec3 } from "../Vector";
 
-export class EncasedFan extends KineticBlockEntity {
+export default class EncasedFan extends KineticBlockEntity {
+
+  #molangVarMap = new MolangVariableMap();
+
   /**
    *
-   * @param {Block} block
+   * @param {Entity} entity
    */
-  constructor(block) {
-    super(block);
-    this.block = block;
+  constructor(entity) {
+    const block = entity.dimension.getBlock(entity.location);
+    super(block, entity);
+    this.direction = vec3(block.north(1).location);
+    this.maxPushDistance = this.getPushDistance(); // Default
     system.runInterval(() => this.tick())
   }
 
   tick() {
-    const directionNum = speed > 0 ? 1 : -1;
-    const direction = this.block.north(directionNum).location;
+    if (this.speed != this.previousSpeed) {
+      this.onSpeedChanged()
+    }
     const dimension = this.block.dimension;
-    const maxPushDistance = this.getPushDistance();
-    const molangVarMap = new MolangVariableMap();
-    molangVarMap.setSpeedAndDirection('air_flow', speed, direction);
-    dimension.spawnParticle('create:air_flow', direction, molangVarMap)
-    const entitiesToBlow = dimension.getEntities({ location: direction, maxDistance: maxPushDistance });
+    this.#molangVarMap.setSpeedAndDirection('air_flow', this.speed, this.direction);
+    dimension.spawnParticle('create:air_flow', this.direction, this.#molangVarMap)
+    const entitiesToBlow = dimension.getEntitiesFromRay(this.block.location, this.direction, { maxDistance: this.maxPushDistance }).map(hit => hit.entity);
     const itemsToBlow = entitiesToBlow.filter(entity => entity.typeId === 'minecraft:item');
 
     if (this.canBlowEntities()) {
-      this.blow(entitiesToBlow, direction)
+      this.blow(entitiesToBlow)
     } else {
-      this.blow(itemsToBlow, direction)
+      this.blow(itemsToBlow)
     }
 
   }
@@ -66,8 +70,14 @@ export class EncasedFan extends KineticBlockEntity {
     return this.speed > 4
   }
 
-  blow(entities, direction) {
-    const vector = vec3(direction).multiply(this.speed).normalized
+  onSpeedChanged() {
+    const directionNum = this.speed > 0 ? 1 : -1;
+    this.direction = this.block.north(directionNum).location;
+    this.maxPushDistance = this.getPushDistance();
+  }
+
+  blow(entities) {
+    const vector = this.direction.multiply(this.speed).normalized
     entities.forEach(entity => {
       entity.applyImpulse(vector)
     })

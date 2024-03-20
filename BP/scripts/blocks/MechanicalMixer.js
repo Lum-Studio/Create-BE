@@ -1,5 +1,5 @@
 
-class MechanicalMixer {
+export default class MechanicalMixer {
     
     constructor(entity){
 
