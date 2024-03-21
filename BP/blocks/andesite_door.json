@@ -1,0 +1,66 @@
+{
+  "format_version": "1.20.70",
+  "minecraft:block": {
+    "description": {
+      "identifier": "create:andesite_door",
+      "states": {
+        "create:half": ["lower", "upper"],
+        "create:open": [false, true]
+      },
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": ["minecraft:cardinal_direction"]
+        }
+      },
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:flammable": false,
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:collision_box": { "origin": [5, 0, -8], "size": [3, 16, 16] },
+      "minecraft:selection_box": { "origin": [5, 0, -8], "size": [3, 16, 16] },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.5
+      },
+      "minecraft:custom_components": ["create:andesite_door"],
+      "minecraft:geometry": {
+        "identifier": "geometry.andesite_door",
+        "bone_visibility": {
+          "top": "q.block_state('create:half') == 'upper' && q.block_state('create:open') == false",
+          "bottom": "q.block_state('create:half') == 'lower' && q.block_state('create:open') == false",
+          "bottom_open": "q.block_state('create:half') == 'lower' && q.block_state('create:open') == true",
+          "top_open": "q.block_state('create:half') == 'upper' && q.block_state('create:open') == true"
+        }
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "andesite_door",
+          "render_method": "alpha_test_single_sided"
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": { "minecraft:transformation": { "rotation": [0, -90, 0] }, "tag:create:direction_south": {} }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": { "minecraft:transformation": { "rotation": [0, 90, 0] }, "tag:create:direction_north": {} }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": { "minecraft:transformation": { "rotation": [0, 0, 0] }, "tag:create:direction_east": {} }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": { "minecraft:transformation": { "rotation": [0, 180, 0] }, "tag:create:direction_west": {} }
+      }
+    ]
+  }
+}
