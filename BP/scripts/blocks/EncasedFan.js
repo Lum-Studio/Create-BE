@@ -1,5 +1,5 @@
 import { Entity, MolangVariableMap, system } from "@minecraft/server";
-import { KineticBlockEntity } from "./base/KineticBlockEntity";
+import KineticBlockEntity from "./base/KineticBlockEntity";
 import { vec3 } from "../Vector";
 
 export default class EncasedFan extends KineticBlockEntity {
