@@ -1,6 +1,6 @@
 import { world, system } from "@minecraft/server";
 import Cogwheel from "../Cogwheel";
-import MechanicalMixer from "../MechanicalMixer";
+import MechanicalMixer from "../Cogwheel";
 import KineticInstances from "../KineticInstances";
 import EncasedFan from "../EncasedFan";
 import ValveHandle from "../cranks/ValveHandle";

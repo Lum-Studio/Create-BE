@@ -1,10 +1,11 @@
-import { KineticBlockEntity } from "../base/KineticBlockEntity";
+import GeneratingKineticBlockEntity from "../base/GeneratingKineticBlockEntity";
+import KineticBlockEntity from "../base/KineticBlockEntity";
 
-export default class HandCrank extends KineticBlockEntity {
+export default class HandCrank extends GeneratingKineticBlockEntity {
     #backwards = false;
     constructor(entity) {
-        const block = entity.dimension.getBlock(entity.location);
-        super(block, entity);
+        super(entity);
+        this.setSpeed(32)
     }
 
     turn(backwards) {

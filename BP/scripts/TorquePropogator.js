@@ -12,7 +12,9 @@ export default class TorquePropagator {
         const id = be.network;
         if (id !== undefined) {
             return KineticNetwork.load(id);
-        } else return new KineticNetwork();
+        } else {
+            return new KineticNetwork();
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 import { Player, Block } from "@minecraft/server";
+import { Vec3, vec3 } from "./Vector";
 
 Player.prototype.applyImpulse = function (vector) {
     const horizontal = Math.sqrt(vector.x * vector.x + vector.z * vector.z) * 2.0;
@@ -10,7 +11,7 @@ Player.prototype.applyImpulse = function (vector) {
 /**
  * Gets adjacent blocks connected to the current block.
  * @this {Block}
- * @param {function(Block):void} filter A filter to apply to the search.
+ * @param {(Block) => void} filter A filter to apply to the search.
  * @memberof Block
  * @param {number} maxSearch The maximum number of blocks to search.
  * @returns {Block[]} - An array of adjacent blocks.

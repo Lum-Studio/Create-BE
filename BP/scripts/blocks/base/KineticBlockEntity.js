@@ -1,5 +1,6 @@
 import { Block, Entity, system } from "@minecraft/server"
 import TorquePropagator from "../../TorquePropogator";
+import KineticNetwork from "../../KineticNetwork";
 
 const ROTATION_ID = 'create:rotation_speed';
 
@@ -17,16 +18,18 @@ export default class KineticBlockEntity {
         this.speedUpRotation = this.entity.setProperty;
         this.previousSpeed = 0;
         this.stress;
-        this.currentCapacity;
+        this.capacity;
         this.overStressed;
-        this.network = TorquePropagator.getOrCreateNetworkFor(this);
+        this.lastStressApplied = 0;
+        this.lastCapacityProvided = 0;
+        this.network = KineticNetwork.generateID();
         system.runInterval(() => this.tick());
     }
 
 
-    onSpeedChanged() {
-        this.previousSpeed = this.speed;
-        
+    onSpeedChanged(previousSpeed) {
+        this.previousSpeed = previousSpeed;
+
     }
 
     setNetwork(network) {
@@ -34,8 +37,8 @@ export default class KineticBlockEntity {
     }
 
     setSpeed(speed) {
+        this.onSpeedChanged(this.speed);
         this.speed = speed;
-        this.onSpeedChanged();
         this.speedUpRotation(ROTATION_ID, speed)
     }
 
@@ -44,14 +47,26 @@ export default class KineticBlockEntity {
 
     }
 
-
+    // Method for child classes to implement
     getDisplayInfo() {
-
+        const information = {
+            title: "Kinetic Stats",
+            text: "\n§7Kinetic Stress Impact:",
+            // I know it isn't correct
+            text2: `\n §b${Math.abs(this.speed) * 32}su §8at current speed`
+        }
+        return information;
     }
 
-    // Get nearby blocks(sources)
-    onPlace() {
-
+    getSpeed() {
+        if (overStressed)
+            return 0;
+        return this.speed
     }
+// Method for generators to implement
+    getGeneratedSpeed(){
+        
+    }
+
 
 }

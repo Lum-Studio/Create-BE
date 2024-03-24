@@ -22,12 +22,13 @@ export default class KineticNetwork {
         return new KineticNetwork(id, network_data.sources, network_data.members);
     }
 
-    constructor(id = KineticNetwork.generateID(), sources = new Set(), members = new Set()) {
+    constructor(id, sources = new Set(), members = new Set()) {
         this.id = id;
         this.sources = sources;
         this.members = members;
         this.currentCapacity;
         this.currentStress;
+        return id
     }
 
     /**
