@@ -1,0 +1,130 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:block": {
+        "description": {
+            "identifier": "create:andesite_door",
+            "menu_category": {
+                "category": "none",
+                "is_hidden_in_commands": true
+            },
+            "states": {
+                "create:open": [false, true],
+                "create:hinge": ["right", "left"],
+                "create:half": ["lower", "upper"]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"]
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {"minecraft:transformation": {"rotation": [0, 180, 0]}}
+            },
+            {
+                "condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {"minecraft:transformation": {"rotation": [0, 270, 0]}}
+            },
+            {
+                "condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {"minecraft:transformation": {"rotation": [0, 90, 0]}}
+            },
+            {
+                "condition": "query.block_state('create:open')",
+                "components": {"tag:open": {}}
+            },
+            {
+                "condition": "query.block_state('create:open') && query.block_state('create:hinge') == 'right'",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [3, 16, 9]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [3, 16, 9]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('create:open') && query.block_state('create:hinge') == 'left'",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [5, 0, -8],
+                        "size": [3, 16, 9]
+                    },
+                    "minecraft:collision_box": {
+                        "origin": [5, 0, -8],
+                        "size": [3, 16, 9]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('create:half') == 'upper'",
+                "components": {
+                    "tag:upper_door": {},
+                    "minecraft:loot": "loot_tables/empty.json",
+                    "minecraft:geometry": {
+                        "identifier": "geometry.door_upper",
+                        "bone_visibility": {
+                            "open_right": "query.block_state('create:open') && query.block_state('create:hinge') == 'right'",
+                            "open_left": "query.block_state('create:open') && query.block_state('create:hinge') == 'left'",
+                            "main": "!query.block_state('create:open')"
+                        }
+                    },
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "andesite_casing",
+                            "render_method": "alpha_test_single_sided"
+                        },
+                        "door": {
+                            "texture": "andesite_door",
+                            "render_method": "alpha_test_single_sided"
+                        }
+                    }   
+                }
+            }
+        ],
+        "components": {
+            "minecraft:loot": "loot_tables/andesite_door.json",
+            "minecraft:custom_components": ["create:door"],
+            "tag:wood": {},
+            "tag:stone":{},
+            "tag:door": {},
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5
+            },
+            "minecraft:selection_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 16, 3]
+            },
+            "minecraft:collision_box": {
+                "origin": [-8, 0, -8],
+                "size": [16, 16, 3]
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.door_lower",
+                "bone_visibility": {
+                    "open_right": "query.block_state('create:open') && query.block_state('create:hinge') == 'right'",
+                    "open_left": "query.block_state('create:open') && query.block_state('create:hinge') == 'left'",
+                    "main": "!query.block_state('create:open')"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "andesite_casing",
+                    "render_method": "alpha_test_single_sided"
+                },
+                "door": {
+                    "texture": "andesite_door",
+                    "render_method": "alpha_test_single_sided"
+                }
+            }
+        }
+    }
+}
