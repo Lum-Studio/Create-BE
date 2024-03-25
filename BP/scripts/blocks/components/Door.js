@@ -1,11 +1,10 @@
-import { world, BlockPermutation } from "@minecraft/server";
+import { world } from "@minecraft/server";
 
 world.beforeEvents.worldInitialize.subscribe(initEvent => {
     initEvent.blockTypeRegistry.registerCustomComponent('create:door', {
-        onPlace: e => {
-            const per = e.block.permutation;
-            if (per.getState("create:half") === "lower") {
-                e.block.above().setPermutation(BlockPermutation.resolve("create:andesite_door", {"minecraft:cardinal_direction": per.getState("minecraft:cardinal_direction"), "create:half": "upper", "create:hinge": per.getState("create:hinge")}));
+        onPlace: ({ block }) => {
+            if (block.permutation.getState("create:half") === "lower") {
+                block.above().setPermutation(block.permutation.withState("create:half", 'upper'));
             }
         },
         beforeOnPlayerPlace: e => {
@@ -13,16 +12,21 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
                 e.cancel = true
             }
         },
-        onPlayerDestroy: e => {
-            if (e.block.above().hasTag("upper_door")) {
-                e.dimension.runCommand(`setblock ${e.block.location.x} ${e.block.location.y + 1} ${e.block.location.z} air destroy`);
+        onPlayerDestroy: ({ block, dimension }) => {
+            if (block.above().hasTag("upper_door")) {
+                dimension.runCommand(`setblock ${block.location.x} ${block.location.y + 1} ${block.location.z} air destroy`);
             } else {
-                e.dimension.runCommand(`setblock ${e.block.location.x} ${e.block.location.y - 1} ${e.block.location.z} air destroy`);
+                dimension.runCommand(`setblock ${block.location.x} ${block.location.y - 1} ${block.location.z} air destroy`);
             }
         },
         onPlayerInteract: e => {
-            if (e.block.hasTag("upper_door")) {
-                
+            let block2 = e.block.hasTag("upper_door") ? e.block.below() : e.block.above();
+            if (!e.block.hasTag("open")) {
+                e.block.setPermutation(e.block.permutation.withState("create:open", true));
+                block2.setPermutation(block2.permutation.withState("create:open", true));
+            } else {
+                e.block.setPermutation(e.block.permutation.withState("create:open", false));
+                block2.setPermutation(block2.permutation.withState("create:open", false));
             }
         }
     });
