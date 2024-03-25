@@ -2,17 +2,12 @@ import { world } from "@minecraft/server";
 
 world.beforeEvents.worldInitialize.subscribe(initEvent => {
     initEvent.blockTypeRegistry.registerCustomComponent('create:door', {
-        onPlace: ({ block, previousBlock }) => {
-            if (!previousBlock.hasTag("door")) {
-                if (block.permutation.getState("create:half") === "lower") {
-                    block.above().setPermutation(block.permutation.withState("create:half", 'upper'));
-                };
-            };
-        },
         beforeOnPlayerPlace: e => {
-            if (!e.block.above().isAir) {
+            const upper_block = e.block.above();
+            if (!upper_block.isAir) {
                 e.cancel = true
             };
+            upper_block.setPermutation(e.permutationToPlace.withState("create:half", 'upper'));
         },
         onPlayerDestroy: ({ block, dimension }) => {
             if (block.above().hasTag("upper_door")) {
@@ -22,14 +17,14 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             };
         },
         onPlayerInteract: e => {
-            let block2 = e.block.hasTag("upper_door") ? e.block.below() : e.block.above();
+            const block2 = e.block.hasTag("upper_door") ? e.block.below() : e.block.above();
             if (!e.block.hasTag("open")) {
                 e.block.setPermutation(e.block.permutation.withState("create:open", true));
                 block2.setPermutation(block2.permutation.withState("create:open", true));
             } else {
                 e.block.setPermutation(e.block.permutation.withState("create:open", false));
                 block2.setPermutation(block2.permutation.withState("create:open", false));
-            }
+            };
         }
     });
 });
