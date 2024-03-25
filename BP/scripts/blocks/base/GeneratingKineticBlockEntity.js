@@ -21,4 +21,6 @@ export default class GeneratingKineticBlockEntity extends KineticBlockEntity {
         }
         return information;
     }
+
+
 }

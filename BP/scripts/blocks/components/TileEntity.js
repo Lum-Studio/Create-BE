@@ -1,4 +1,4 @@
-import { world, system } from "@minecraft/server";
+import { world } from "@minecraft/server";
 import Cogwheel from "../Cogwheel";
 import MechanicalMixer from "../Cogwheel";
 import KineticInstances from "../KineticInstances";
@@ -6,26 +6,27 @@ import EncasedFan from "../EncasedFan";
 import ValveHandle from "../cranks/ValveHandle";
 import HandCrank from "../cranks/HandCrank";
 
-world.afterEvents.playerPlaceBlock.subscribe(({ block, dimension }) => {
-    switch (block.typeId) {
-        case "create:cogwheel":
+world.beforeEvents.worldInitialize.subscribe(initEvent => {
+    initEvent.blockTypeRegistry.registerCustomComponent('create:tile_entity', {
+        onPlace: (e) => {
+            const { block, dimension } = e;
+            // I am sure their are more that don't have tile entities
+            if (block.typeId === 'create:andesite_casing') return;
             dimension.spawnEntity(block.typeId, block.center());
-            break;
-        case "create:mechanical_press":
-            dimension.spawnEntity(block.typeId, block.center());
-            break;
-    }
-});
+        },
+        onPlayerDestroy: e => {
+            const { block, dimension } = e;
+            const location = block.center();
+            dimension.getEntities({ location: location })[0].remove();
+            KineticInstances.delete(dimension, location)
+        },
 
-world.beforeEvents.playerBreakBlock.subscribe(({ block, dimension }) => {
-    switch (block.typeId) {
-        case "create:cogwheel":
-            system.runTimeout(() => { dimension.getEntitiesAtBlockLocation(block.location)[0].remove(); });
-            break;
-        case "create:mechanical_press":
-            system.runTimeout(() => { dimension.getEntitiesAtBlockLocation(block.location)[0].remove(); });
-            break;
-    }
+        onPlayerInteract: e => {
+            if (e.block.hasTag("upper_door")) {
+
+            }
+        }
+    });
 });
 
 

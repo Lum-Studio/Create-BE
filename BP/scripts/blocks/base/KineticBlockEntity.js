@@ -17,26 +17,53 @@ export default class KineticBlockEntity {
         this.speed = this?.entity?.getProperty(ROTATION_ID);
         this.speedUpRotation = this.entity.setProperty;
         this.previousSpeed = 0;
-        this.stress;
-        this.capacity;
-        this.overStressed;
+        this.stress = 0;
+        this.capacity = 0;
+        this.overStressed = false;
         this.lastStressApplied = 0;
         this.lastCapacityProvided = 0;
+        this.networkSize = 0;
         this.network = KineticNetwork.generateID();
+        this.initialize();
         system.runInterval(() => this.tick());
     }
 
+    initialize() {
+        if (this.network) {
+            const network = this.getOrCreateNetwork()
+            if (!network.initialized)
+                network.initFromTE(this.capacity, this.stress, this.networkSize);
+            network.addSilently(this, this.lastCapacityProvided, this.lastStressApplied);
+        }
+
+        super.initialize();
+    }
 
     onSpeedChanged(previousSpeed) {
         this.previousSpeed = previousSpeed;
 
     }
 
-    setNetwork(network) {
+    setNetwork(networkId) {
+        if (this.network == networkId)
+            return;
         this.network = network;
+
+        if (this.network != null)
+            this.getOrCreateNetwork().remove(this);
+
+        if (networkId == null)
+            return;
+
+        this.network = networkId;
+        const network = getOrCreateNetwork();
+        network.initialized = true;
+        network.add(this);
+
     }
 
     setSpeed(speed) {
+        if (speed === this.speed) return;
         this.onSpeedChanged(this.speed);
         this.speed = speed;
         this.speedUpRotation(ROTATION_ID, speed)
@@ -63,10 +90,34 @@ export default class KineticBlockEntity {
             return 0;
         return this.speed
     }
-// Method for generators to implement
-    getGeneratedSpeed(){
-        
+    // Method for generators to implement
+    getGeneratedSpeed() {
+        return 0;
     }
 
+
+    getOrCreateNetwork() {
+        return TorquePropagator.getOrCreateNetworkFor(this)
+    }
+
+    updateFromNetwork(maxStress, currentStress, networkSize) {
+        networkDirty = false;
+        this.capacity = maxStress;
+        this.stress = currentStress;
+        this.networkSize = networkSize;
+		const overStressed = maxStress < currentStress
+
+        if (overStressed != this.overStressed) {
+			const prevSpeed = this.speed;
+            this.overStressed = overStressed;
+            this.onSpeedChanged(prevSpeed);
+        }
+    }
+
+     calculateAddedStressCapacity() {
+		const capacity =  something.getCapacity();
+		this.lastCapacityProvided = capacity;
+		return capacity;
+	}
 
 }

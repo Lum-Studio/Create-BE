@@ -11,9 +11,14 @@ const StressMap = {
     "MEDIUM": "§e",
     "HIGH": "§6",
     "OVERSTRESSED": "§c"
+}
 
+const StressPerRPM = {
+    
 }
 class SpeedLevel {
+
+
     static of(speed) {
         speed = Math.abs(speed);
         if (speed >= 100)
@@ -28,6 +33,8 @@ class SpeedLevel {
 }
 
 class StressImpact {
+    
+
     static of(stressPercent) {
         if (stressPercent > 1)
             return StressMap.OVERSTRESSED;

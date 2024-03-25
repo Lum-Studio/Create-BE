@@ -27,7 +27,7 @@
       "minecraft:destructible_by_explosion": {
         "explosion_resistance": 0.5
       },
-      "minecraft:custom_components": ["create:andesite_door"],
+      "minecraft:custom_components": ["create:door"],
       "minecraft:geometry": {
         "identifier": "geometry.andesite_door",
         "bone_visibility": {
