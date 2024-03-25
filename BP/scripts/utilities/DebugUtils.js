@@ -1,11 +1,11 @@
 import { world } from "@minecraft/server";
-import KineticInstances from "./blocks/";
+import KineticInstances from "../blocks/KineticInstances";
 
-world.beforeEvents.chatSend.subscribe(({sender, message, cancel}) => {
+world.afterEvents.chatSend.subscribe(({sender, message}) => {
     if (message.startsWith("!")) {
         switch(message) {
+            // debug tools didnt work with beforeevents
             case "!clear tile entities":
-                cancel = true;
                 for (const entity of sender.dimension.getEntities()) {
                     if (entity.typeId.startsWith("create:")) {
                         entity.remove();
@@ -13,7 +13,6 @@ world.beforeEvents.chatSend.subscribe(({sender, message, cancel}) => {
                 };
                 break;
             case "!data get":
-                cancel = true;
                 printData(sender);
                 break
         }

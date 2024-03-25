@@ -41,35 +41,36 @@
 			}
 		],
 		"components": {
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "axis",
-					"render_method": "opaque"
-				}
-			},
-			"minecraft:destructible_by_explosion": {
-				"explosion_resistance": 6
-			},
-			"minecraft:map_color": "#FFFFFF",
-			"minecraft:on_placed": {"event": "create:on_placed"},
-			"tag:stone": {},
-			"minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
-			"minecraft:geometry": {
-				"identifier": "geometry.shaft"
-			},
-			"minecraft:collision_box" : {
-				"origin": [-2.5,0,-2.5],
-				"size": [5,16,6]
-			},
-			"minecraft:selection_box": {
-				"origin": [-2.5,0,-2.5],
-				"size": [5,16,5]
-			},
-			"minecraft:on_player_placing": {
-				"event": "create:on_player_placed"
-			},
-			"minecraft:flammable":false
-		},
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "axis",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 6
+      },
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:on_placed": { "event": "create:on_placed" },
+      "tag:stone": {},
+      "minecraft:custom_components": ["create:tile_entity"],
+      "minecraft:destructible_by_mining": { "seconds_to_destroy": 8 },
+      "minecraft:geometry": {
+        "identifier": "geometry.shaft"
+      },
+      "minecraft:collision_box": {
+        "origin": [-2.5, 0, -2.5],
+        "size": [5, 16, 6]
+      },
+      "minecraft:selection_box": {
+        "origin": [-2.5, 0, -2.5],
+        "size": [5, 16, 5]
+      },
+      "minecraft:on_player_placing": {
+        "event": "create:on_player_placed"
+      },
+      "minecraft:flammable": false
+    },
 		"events": {
 			"create:on_player_placed":{
 				"set_block_state" : {

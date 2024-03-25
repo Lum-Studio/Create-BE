@@ -17,7 +17,10 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
         onPlayerDestroy: e => {
             const { block, dimension } = e;
             const location = block.center();
-            dimension.getEntities({ location: location })[0].remove();
+            dimension
+              .getEntities({ location: location })
+              .filter((v) => v.typeId == block.typeId)[0]
+              .remove()
             KineticInstances.delete(dimension, location)
         },
 
