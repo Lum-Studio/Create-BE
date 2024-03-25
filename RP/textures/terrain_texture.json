@@ -47,7 +47,7 @@
     "mechanical_press_axis": {
       "textures": "textures/blocks/mechanical_press/mechanical_press_axis"
     },
-    "mechanical_press_bottom": {
+    "mechanical_press_bottom" : {
       "textures": "textures/blocks/mechanical_press/mechanical_press_bottom"
     },
     "mechanical_press_head": {
@@ -56,10 +56,10 @@
     "mechanical_press_pole": {
       "textures": "textures/blocks/mechanical_press/mechanical_press_pole"
     },
-    "mechanical_press_side": {
+    "mechanical_press_side" : {
       "textures": "textures/blocks/mechanical_press/mechanical_press_side"
     },
-    "mechanical_press_top": {
+    "mechanical_press_top" : {
       "textures": "textures/blocks/mechanical_press/mechanical_press_top"
     },
     "zinc_ore": {
