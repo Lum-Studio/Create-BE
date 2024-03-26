@@ -35,7 +35,7 @@ export default class KineticBlockEntity {
       network.addSilently(this, this.lastCapacityProvided, this.lastStressApplied);
     }
 
-    super.initialize();
+    // super.initialize();
   }
 
   onSpeedChanged(previousSpeed) {
@@ -110,7 +110,7 @@ export default class KineticBlockEntity {
   }
 
   calculateStressApplied() {
-    const impact = something.getImpact();
+    const impact = 0//something.getImpact();
     this.lastStressApplied = impact;
     return impact;
   }

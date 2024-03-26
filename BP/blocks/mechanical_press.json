@@ -32,7 +32,7 @@
         "components": {
           "tag:wood": {},
           "tag:stone": {},
-          "minecraft:custom_components": ["create:tile_entity"],
+          "minecraft:custom_components": ["create:tile_entity", "create:placed"],
           "minecraft:destructible_by_explosion": {
             "explosion_resistance": 6
           },

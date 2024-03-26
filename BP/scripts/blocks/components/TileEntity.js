@@ -34,7 +34,6 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
   });
 });
 
-// Not adding kinetic instance to block/entity - bug
 world.afterEvents.entitySpawn.subscribe(({ entity }) => {
   const { dimension, location, typeId } = entity;
   let block = dimension.getBlock(location);
