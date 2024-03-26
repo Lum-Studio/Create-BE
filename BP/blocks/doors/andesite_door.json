@@ -32,12 +32,13 @@
                 "components": {"minecraft:transformation": {"rotation": [0, 90, 0]}}
             },
             {
-                "condition": "query.block_state('create:open')",
-                "components": {"tag:open": {}}
+                "condition": "query.block_state('create:hinge') == 'left'",
+                "components": {"tag:left": {}}
             },
             {
-                "condition": "query.block_state('create:open') && query.block_state('create:hinge') == 'right'",
+                "condition": "query.block_state('create:open') && query.block_state('create:hinge') == 'left'",
                 "components": {
+                    "tag:open": {},
                     "minecraft:selection_box": {
                         "origin": [-8, 0, -8],
                         "size": [3, 16, 9]
@@ -49,8 +50,9 @@
                 }
             },
             {
-                "condition": "query.block_state('create:open') && query.block_state('create:hinge') == 'left'",
+                "condition": "query.block_state('create:open') && query.block_state('create:hinge') == 'right'",
                 "components": {
+                    "tag:open": {},
                     "minecraft:selection_box": {
                         "origin": [5, 0, -8],
                         "size": [3, 16, 9]
