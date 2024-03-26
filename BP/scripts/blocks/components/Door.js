@@ -115,7 +115,6 @@ function getN(string, location, bool) {
 }
 
 function getHinge(player, direction) {
-    console.warn(direction);
     switch(direction) {
         case "north":
             if (player.getViewDirection().x < 0) {
