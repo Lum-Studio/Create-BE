@@ -2,27 +2,27 @@
     "format_version": "1.20.80",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "create:andesite_door",
+            "identifier": "create:glass_door",
             "materials": {
                 "default": "moving_block_alpha_single_side"
             },
             "geometry": {
-                "default": "geometry.door_flap"
+                "default": "geometry.door_slide"
             },
             "textures": {
-                "default": "textures/blocks/andesite_door"
+                "default": "textures/blocks/glass_door"
             },
             "render_controllers": [
-                "controller.render.door_flap"
+                "controller.render.cow"
             ],
             "animations": {
                 "placement_direction": "animation.cardinal_direction",
-                "flap": "animation.door.flap"
+                "slide": "animation.door.slide"
             },
             "scripts": {
                 "animate": [
                     "placement_direction",
-                    "flap"
+                    "slide"
                 ],
                 "initialize": [
                     "variable.partial_ticks = 0;"

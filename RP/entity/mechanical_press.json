@@ -4,7 +4,7 @@
         "description": {
             "identifier": "create:mechanical_press",
             "materials": {
-                "default": "zombie"
+                "default": "moving_block"
             },
             "geometry": {
                 "default": "geometry.mechanical_press_head"
