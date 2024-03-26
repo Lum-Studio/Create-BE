@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.door.flap": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"right": {
+					"rotation": [0, "-181 * variable.partial_ticks * variable.partial_ticks", 0]
+				},
+				"left": {
+					"rotation": [0, "91 * variable.partial_ticks * variable.partial_ticks", 0],
+					"position": [0, 0, 0.5]
+				},
+				"left2": {
+					"rotation": [0, "181 * variable.partial_ticks * variable.partial_ticks", 0]
+				},
+				"right2": {
+					"rotation": [0, "-91 * variable.partial_ticks * variable.partial_ticks", 0],
+					"position": [0, 0, 0.5]
+				}
+			}
+		}
+	}
+}
