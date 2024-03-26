@@ -80,7 +80,7 @@
             }
         ],
         "components": {
-            "minecraft:loot": "loot_tables/andesite_door.json",
+            "minecraft:loot": "loot_tables/glass_door.json",
             "minecraft:custom_components": ["create:door"],
             "tag:wood": {},
             "tag:stone":{},
@@ -109,16 +109,19 @@
             },
             "minecraft:material_instances": {
                 "*": {
-                    "texture": "andesite_casing",
-                    "render_method": "alpha_test_single_sided"
+                    "texture": "framed_glass",
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false
                 },
                 "door": {
                     "texture": "glass_door",
-                    "render_method": "alpha_test_single_sided"
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false
                 },
                 "invisible": {
                     "texture": "invisible",
-                    "render_method": "alpha_test_single_sided"
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false
                 }
             }
         }
