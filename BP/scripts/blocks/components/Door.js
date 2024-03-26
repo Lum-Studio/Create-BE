@@ -13,12 +13,22 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
             if (e.block.above().hasTag("upper_door")) {
                 e.dimension.runCommand(`setblock ${e.block.location.x} ${e.block.location.y + 1} ${e.block.location.z} air destroy`);
                 if (e.destroyedBlockPermutation.getState("create:open")) {
-                    e.dimension.getEntitiesAtBlockLocation(e.block.location)[0].remove();
+                    e.dimension
+                      .getEntitiesAtBlockLocation(e.block.location)
+                      .filter((v) => v.typeId == e.destroyedBlockPermutation.type.id)[0]
+                      .remove();
                 }
             } else {
                 e.dimension.runCommand(`setblock ${e.block.location.x} ${e.block.location.y - 1} ${e.block.location.z} air destroy`);
                 if (e.destroyedBlockPermutation.getState("create:open")) {
-                    e.dimension.getEntitiesAtBlockLocation({x: e.block.location.x, y: e.block.location.y - 1, z: e.block.location.z})[0].remove();
+                    e.dimension
+                      .getEntitiesAtBlockLocation({
+                        x: e.block.location.x,
+                        y: e.block.location.y - 1,
+                        z: e.block.location.z,
+                      })
+                      .filter((v) => v.typeId == e.destroyedBlockPermutation.type.id)[0]
+                      .remove();
                 }
             };
         },
@@ -36,7 +46,13 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
                 e.block.setPermutation(e.block.permutation.withState("create:open", true));
                 block2.setPermutation(block2.permutation.withState("create:open", true));
             } else {
-                const entity = e.block.hasTag("upper_door") ? e.dimension.getEntitiesAtBlockLocation(block2.location)[0] : e.dimension.getEntitiesAtBlockLocation(e.block.location)[0];
+                const entity = e.block.hasTag("upper_door")
+                  ? e.dimension
+                      .getEntitiesAtBlockLocation(block2.location)
+                      .filter((v) => v.typeId == e.block.type.id)[0]
+                  : e.dimension
+                      .getEntitiesAtBlockLocation(e.block.location)
+                      .filter((v) => v.typeId == e.block.type.id)[0];
                 entity.setProperty("create:open", false);
                 system.runTimeout(() => {
                     if (entity.getProperty("create:open") === false) {
@@ -63,7 +79,9 @@ world.beforeEvents.worldInitialize.subscribe(initEvent => {
                         top.setPermutation(top.permutation.withState("create:open", true));
                         bottom.setPermutation(bottom.permutation.withState("create:open", true));
                     } else {
-                        const entity2 = e.dimension.getEntitiesAtBlockLocation(bottom.location)[0];
+                        const entity2 = e.dimension
+                          .getEntitiesAtBlockLocation(bottom.location)
+                          .filter((v) => v.typeId == e.block.type.id)[0];
                         entity2.setProperty("create:open", false);
                         system.runTimeout(() => {
                             if (entity2.getProperty("create:open") === false) {
