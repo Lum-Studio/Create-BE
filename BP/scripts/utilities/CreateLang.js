@@ -45,14 +45,14 @@ world.beforeEvents.worldInitialize.subscribe(({ blockTypeRegistry }) => {
   blockTypeRegistry.registerCustomComponent("create:block_face_3", {
     beforeOnPlayerPlace(arg) {
       const face = arg.face
-      arg.permutationToPlace = arg.permutationToPlace.withState("create:block_face", QueryBlockFace3(face));
+      arg.permutationToPlace = arg.permutationToPlace.withState("create:placing_axis", QueryBlockFace3(face));
     },
   });
 
   blockTypeRegistry.registerCustomComponent("create:cardinal_direction_3", {
     beforeOnPlayerPlace(arg) {
       const player = arg.player
-      arg.permutationToPlace = arg.permutationToPlace.withState("create:cardinal_direction", QueryCardinal3(arg.player));
+      arg.permutationToPlace = arg.permutationToPlace.withState("create:placing_axis", QueryCardinal3(arg.player));
     },
   });
 });

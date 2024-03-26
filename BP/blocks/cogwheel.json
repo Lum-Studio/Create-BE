@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.40",
+	"format_version": "1.20.70",
 	"minecraft:block": {
 		"description": {
 			"identifier": "create:cogwheel",
@@ -41,7 +41,7 @@
 			}
 		],
 		"components": {
-			"minecraft:custom_components": ["create:tile_entity"],
+			"minecraft:custom_components": ["create:tile_entity", "create:cardinal_direction_3", "create:placed"],
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "cogwheel",
@@ -51,7 +51,6 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 6
 			},
-			"minecraft:on_placed": {"event": "create:on_placed"},
 			"tag:stone": {},
 			"minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
 			"minecraft:geometry": {
@@ -69,23 +68,7 @@
 				"origin": [-2.5,0,-2.5],
 				"size": [5,16,5]
 			},
-			"minecraft:on_player_placing": {
-				"event": "create:on_player_placed"
-			},
 			"minecraft:flammable":false
-		},
-		"events": {
-			"create:on_player_placed":{
-				"set_block_state" : {
-					"create:placed" : true,
-					"create:placing_axis": "math.floor(query.cardinal_facing / 2)"
-				}
-			},
-			"create:on_placed": {
-				"set_block_state" : {
-					"create:placed" : true
-				}
-			}
 		}
 	}
 }
