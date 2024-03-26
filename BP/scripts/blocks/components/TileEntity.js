@@ -12,7 +12,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
       const { block, dimension } = e;
       // I am sure their are more that don't have tile entities
       if (block.typeId === "create:andesite_casing") return;
-      dimension.spawnEntity(block.typeId, block.center());
+      dimension.spawnEntity(e.permutationToPlace.type.id, block.center());
     },
 
     onPlayerDestroy: (e) => {
@@ -26,15 +26,14 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
     },
   });
 
-    initEvent.blockTypeRegistry.registerCustomComponent("create:placed", {
-      beforeOnPlayerPlace: (e) => {
-        e.permutationToPlace = e.permutationToPlace.withState("create:placed", true);
-      },
-    });
+  initEvent.blockTypeRegistry.registerCustomComponent("create:placed", {
+    beforeOnPlayerPlace: (e) => {
+      e.permutationToPlace = e.permutationToPlace.withState("create:placed", true);
+    },
+  });
 });
 
-
-// Not adding kinetic instance to block/entity
+// Not adding kinetic instance to block/entity - bug
 world.afterEvents.entitySpawn.subscribe(({ entity }) => {
   const { dimension, location, typeId } = entity;
   switch (typeId) {
@@ -59,7 +58,6 @@ world.afterEvents.entitySpawn.subscribe(({ entity }) => {
       break;
   }
 });
-
 
 //Attempt at non-pushable blocks <it destroys then on piston push> not working
 // world.afterEvents.pistonActivate.subscribe((arg) => {
