@@ -1,0 +1,37 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "create:andesite_door",
+            "materials": {
+                "default": "moving_block_alpha_single_side"
+            },
+            "geometry": {
+                "default": "geometry.andesite_door"
+            },
+            "textures": {
+                "default": "textures/blocks/andesite_door"
+            },
+            "render_controllers": [
+                "controller.render.door_flap"
+            ],
+            "animations": {
+                "placement_direction": "animation.cardinal_direction",
+                "slide": "animation.door.flap"
+            },
+            "scripts": {
+                "animate": [
+                    "placement_direction",
+                    "slide"
+                ],
+                "initialize": [
+                    "variable.partial_ticks = 0;"
+                ],
+                "pre_animation": [
+                    "variable.partial_ticks = math.clamp(query.property('create:open') ? v.partial_ticks + q.delta_time * 3 : v.partial_ticks - q.delta_time * 3, 0, 1);"
+                ]
+            },
+            "enable_attachables": false
+        }
+    }
+}
