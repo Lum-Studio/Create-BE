@@ -1,0 +1,27 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "create:glass_door",
+            "runtime_identifier": "minecraft:snowball",
+            "properties": {
+                "create:cardinal_direction": {"type": "int", "range": [0,3], "default": 0, "client_sync": true},
+                "create:hinge": {"type": "bool", "client_sync": true, "default": true},
+                "create:open": {"type": "bool", "client_sync": true, "default": true}
+            },
+            "is_spawnable": false,
+            "is_summonable": true
+        },
+        "component_groups": {
+            "create:despawn": {"minecraft:instant_despawn": {}}
+        },
+        "components": {
+            "minecraft:health": {"value": 1, "max": 1, "min": 1},
+            "minecraft:type_family": {"family": ["inanimate"]},
+            "minecraft:fire_immune": {},
+            "minecraft:pushable": {"is_pushable": false,"is_pushable_by_piston": false},
+            "minecraft:conditional_bandwidth_optimization": {"default_values": {"max_dropped_ticks": 100000, "use_motion_prediction_hints": false, "max_optimized_distance": 0}}
+        },
+        "events": {"create:despawn": {"add": {"component_groups": ["create:despawn"]}}}
+    }
+}
