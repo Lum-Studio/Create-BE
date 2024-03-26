@@ -7,7 +7,7 @@
                 "default": "moving_block_alpha_single_side"
             },
             "geometry": {
-                "default": "geometry.andesite_door"
+                "default": "geometry.door_flap"
             },
             "textures": {
                 "default": "textures/blocks/andesite_door"
