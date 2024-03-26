@@ -67,8 +67,8 @@ export default class KineticNetwork {
         this.unloadedStress = currentStress;
         this.unloadedMembers = members;
         this.initialized = true;
-        updateStress();
-        updateCapacity();
+        this.updateStress();
+        this.updateCapacity();
     }
 
     calculateCapacity() {
@@ -101,8 +101,8 @@ export default class KineticNetwork {
 
 
     updateNetwork() {
-        const newStress = calculateStress();
-        const newMaxStress = calculateCapacity();
+        const newStress = this.calculateStress();
+        const newMaxStress = this.calculateCapacity();
         if (this.currentStress != newStress || this.currentCapacity != newMaxStress) {
             this.currentStress = newStress;
             this.currentCapacity = newMaxStress;
@@ -121,7 +121,7 @@ export default class KineticNetwork {
 
 
     updateCapacity() {
-        this.newMaxStress = this.calculateCapacity();
+        const newMaxStress = this.calculateCapacity();
         if (this.currentCapacity != newMaxStress) {
             this.currentCapacity = newMaxStress;
             this.sync();
