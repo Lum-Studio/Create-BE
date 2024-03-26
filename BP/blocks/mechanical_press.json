@@ -30,63 +30,62 @@
             }
         ],
         "components": {
-          "tag:wood": {},
-          "tag:stone": {},
-          "minecraft:custom_components": ["create:tile_entity"],
-          "minecraft:destructible_by_explosion": {
-            "explosion_resistance": 6
-          },
-          "minecraft:destructible_by_mining": {
-            "seconds_to_destroy": 1.5
-          },
-          "minecraft:selection_box": {
-            "origin": [-8, 2, -8],
-            "size": [16, 14, 16]
-          },
-          "minecraft:collision_box": {
-            "origin": [-8, 2, -8],
-            "size": [16, 14, 16]
-          },
-          "minecraft:geometry": {
-            "identifier": "geometry.mechanical_press_inventory"
-          },
-          "minecraft:material_instances": {
-            "*": {
-              "texture": "mechanical_press_side",
-              "render_method": "opaque"
+            "tag:wood": {},
+            "tag:stone":{},
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6
             },
-            "gearbox_top": {
-              "texture": "gearbox_top",
-              "render_method": "opaque"
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5
             },
-            "gearbox": {
-              "texture": "gearbox",
-              "render_method": "opaque"
+            "minecraft:selection_box": {
+                "origin": [-8, 2, -8],
+                "size": [16, 14, 16]
             },
-            "mechanical_press_top": {
-              "texture": "mechanical_press_top",
-              "render_method": "opaque"
+            "minecraft:collision_box": {
+                "origin": [-8, 2, -8],
+                "size": [16, 14, 16]
             },
-            "mechanical_press_bottom": {
-              "texture": "mechanical_press_bottom",
-              "render_method": "opaque"
+            "minecraft:geometry": {
+                "identifier": "geometry.mechanical_press_inventory"
             },
-            "mechanical_press_pole": {
-              "texture": "mechanical_press_pole",
-              "render_method": "opaque"
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "mechanical_press_side",
+                    "render_method": "opaque"
+                },
+                "gearbox_top": {
+                    "texture": "gearbox_top",
+                    "render_method": "opaque"
+                },
+                "gearbox": {
+                    "texture": "gearbox",
+                    "render_method": "opaque"
+                },
+                "mechanical_press_top": {
+                    "texture": "mechanical_press_top",
+                    "render_method": "opaque"
+                },
+                "mechanical_press_bottom": {
+                    "texture": "mechanical_press_bottom",
+                    "render_method": "opaque"
+                },
+                "mechanical_press_pole": {
+                    "texture": "mechanical_press_pole",
+                    "render_method": "opaque"
+                },
+                "mechanical_press_head": {
+                    "texture": "mechanical_press_head",
+                    "render_method": "opaque"
+                },
+                "mechanical_press_axis": {
+                    "texture": "mechanical_press_axis",
+                    "render_method": "opaque"
+                }
             },
-            "mechanical_press_head": {
-              "texture": "mechanical_press_head",
-              "render_method": "opaque"
-            },
-            "mechanical_press_axis": {
-              "texture": "mechanical_press_axis",
-              "render_method": "opaque"
+            "minecraft:on_player_placing": {
+                "event": "on_player_placed"
             }
-          },
-          "minecraft:on_player_placing": {
-            "event": "on_player_placed"
-          }
         },
         "events": {
             "on_player_placed": {

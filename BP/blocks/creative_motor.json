@@ -39,7 +39,6 @@
     ],
     "components": {
       "minecraft:destructible_by_mining": { "seconds_to_destroy": 8 },
-      "minecraft:custom_components": ["create:tile_entity"],
       "minecraft:geometry": {
         "identifier": "geometry.creative_motor",
         "bone_visibility": {
