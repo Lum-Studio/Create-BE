@@ -32,6 +32,9 @@
     "deepslate_zinc_ore": {
       "textures": "textures/blocks/deepslate_zinc_ore"
     },
+    "framed_glass": {
+      "textures": "textures/blocks/framed_glass"
+    },
     "gearbox": {
       "textures": "textures/blocks/gearbox"
     },
