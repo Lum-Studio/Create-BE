@@ -3,67 +3,41 @@ import { Direction, Player, world } from "@minecraft/server";
 export class CreateLang {}
 
 /**
- * @param {Direction} face
- * @returns the block face for what the block was placed on.
+ * This function takes a `face` parameter and returns a numerical value based on the input.
+ * The function is used to determine the block face for which a block was placed on.
+ *
+ * @param {string} face - The face of the block where it was placed. It can be one of the following values: "Up", "Down", "North", "South", "West", "East".
+ * @returns {number} - A numerical value representing the block face for which the block was placed on.
  */
-
 export function QueryBlockFace3(face) {
   switch (face) {
     case "Up":
-      return 0;
-      break;
     case "Down":
       return 0;
-      break;
     case "North":
-      return 1;
-      break;
     case "South":
       return 1;
-      break;
     case "West":
-      return 2;
-      break;
     case "East":
       return 2;
-      break;
   }
 }
 
 /**
- * @param {Player} player
- * @returns the players cardinal facing direction
+ * Returns a numerical value representing the player's cardinal facing direction.
+ * @param {Player} player - The player object for which to determine the cardinal facing direction.
+ * @returns {number} - A numerical value representing the player's cardinal facing direction. Possible values are 0 (down), 1 (north/south), or 2 (east/west).
  */
-
 export function QueryCardinal3(player) {
-  let viewDirection = player.getViewDirection();
-  let viewDirectionX = viewDirection.x;
-  let viewDirectionY = viewDirection.y;
-  let viewDirectionZ = viewDirection.z;
+  const viewDirection = player.getViewDirection();
+  const { x, y, z } = viewDirection;
 
-  // down
-  if (viewDirectionY >= 0.5) {
-    return 0;
-  }
-  // down
-  if (viewDirectionY <= -0.5) {
-    return 0;
-  }
-  // north
-  if (viewDirectionZ >= 0.5) {
-    return 1;
-  }
-  // south
-  if (viewDirectionZ <= -0.5) {
-    return 1;
-  }
-  // east
-  if (viewDirectionX >= 0.5) {
-    return 2;
-  }
-  // west
-  if (viewDirectionX <= -0.5) {
-    return 2;
+  if (y >= 0.5 || y <= -0.5) {
+    return 0; // down
+  } else if (z >= 0.5 || z <= -0.5) {
+    return 1; // north/south
+  } else if (x >= 0.5 || x <= -0.5) {
+    return 2; // east/west
   }
 }
 
