@@ -38,6 +38,9 @@
     "gearbox_top": {
       "textures": "textures/blocks/gearbox_top"
     },
+    "glass_door": {
+      "textures": "textures/blocks/glass_door"
+    },
     "invisible": {
       "textures": "textures/blocks/invisible"
     },

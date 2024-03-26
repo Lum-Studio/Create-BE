@@ -91,6 +91,9 @@
       "experience_nugget": {
          "textures": "textures/items/experience_nugget"
       },
+      "glass_door": {
+         "textures": "textures/items/glass_door"
+      },
       "golden_sheet": {
          "textures": "textures/items/golden_sheet"
       },
