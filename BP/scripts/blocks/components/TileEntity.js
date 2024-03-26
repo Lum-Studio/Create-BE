@@ -5,6 +5,7 @@ import KineticInstances from "../KineticInstances";
 import EncasedFan from "../EncasedFan";
 import ValveHandle from "../cranks/ValveHandle";
 import HandCrank from "../cranks/HandCrank";
+import MechanicalPress from "../MechanicalPress";
 
 world.beforeEvents.worldInitialize.subscribe((initEvent) => {
   initEvent.blockTypeRegistry.registerCustomComponent("create:tile_entity", {
@@ -56,6 +57,10 @@ world.afterEvents.entitySpawn.subscribe(({ entity }) => {
 
     case "create:mechanical_mixer":
       KineticInstances.add(dimension, block.location, new MechanicalMixer(entity));
+      break;
+
+    case "create:mechanical_press":
+      KineticInstances.add(dimension, block.location, new MechanicalPress(entity));
       break;
   }
 });
