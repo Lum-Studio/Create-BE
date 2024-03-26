@@ -15,6 +15,9 @@ world.afterEvents.chatSend.subscribe(({sender, message}) => {
             case "!data get":
                 printData(sender);
                 break
+            case "!data get all":
+                console.warn(KineticInstances.debugInstances());
+                break;
         }
     };
 });

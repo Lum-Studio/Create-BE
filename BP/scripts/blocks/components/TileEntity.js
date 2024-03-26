@@ -36,25 +36,26 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
 // Not adding kinetic instance to block/entity - bug
 world.afterEvents.entitySpawn.subscribe(({ entity }) => {
   const { dimension, location, typeId } = entity;
+  let block = dimension.getBlock(location);
   switch (typeId) {
     case "create:cogwheel":
-      KineticInstances.add(dimension, location, new Cogwheel(entity));
+      KineticInstances.add(dimension, block.location, new Cogwheel(entity));
       break;
 
     case "create:encased_fan":
-      KineticInstances.add(dimension, location, new EncasedFan(entity));
+      KineticInstances.add(dimension, block.location, new EncasedFan(entity));
       break;
 
     case "create:valve_handle":
-      KineticInstances.add(dimension, location, new ValveHandle(entity));
+      KineticInstances.add(dimension, block.location, new ValveHandle(entity));
       break;
 
     case "create:hand_crank":
-      KineticInstances.add(dimension, location, new HandCrank(entity));
+      KineticInstances.add(dimension, block.location, new HandCrank(entity));
       break;
 
     case "create:mechanical_mixer":
-      KineticInstances.add(dimension, location, new MechanicalMixer(entity));
+      KineticInstances.add(dimension, block.location, new MechanicalMixer(entity));
       break;
   }
 });
