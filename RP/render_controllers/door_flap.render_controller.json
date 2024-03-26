@@ -1,0 +1,17 @@
+{
+    "format_version": "1.20.80",
+    "render_controllers": {
+      "controller.render.door_flap": {
+        "geometry": "geometry.default",
+        "materials": [ { "*": "material.default" } ],
+        "textures": [ "texture.default" ],
+        "part_visibility": [
+          {"left": "query.property('create:hinge') == true"},
+          {"right": "query.property('create:hinge') == true"},
+          {"right2": "query.property('create:hinge') == false"},
+          {"left2": "query.property('create:hinge') == false"}
+        ]
+      }
+    }
+  }
+  
