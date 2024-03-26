@@ -1,0 +1,14 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cardinal_direction": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"main": {
+					"rotation": [0, "query.property('create:cardinal_direction') * 90", 0],
+					"position": [0, -0.125, 0]
+				}
+			}
+		}
+	}
+}

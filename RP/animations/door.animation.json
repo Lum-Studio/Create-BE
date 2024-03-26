@@ -19,6 +19,14 @@
 					"position": [0, 0, 0.5]
 				}
 			}
+		},
+		"animation.door.slide": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"door": {
+					"position": ["13 * variable.partial_ticks * variable.partial_ticks * (query.property('create:hinge') ? 1 : -1)", 0, 0.5]
+				}
+			}
 		}
 	}
 }
