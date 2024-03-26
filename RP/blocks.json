@@ -4,12 +4,19 @@
     "sound": "wood",
     "textures": "andesite_casing"
   },
+  "create:andesite_door": {
+    "sound": "wood",
+    "carried_textures": "andesite_door"
+  },
   "create:cogwheel": {
     "sound": "wood"
   },
   "create:deepslate_zinc_ore": {
     "sound": "deepslate",
     "textures": "deepslate_zinc_ore"
+  },
+  "create:glass_door": {
+    "sound": "glass"
   },
   "create:zinc_ore": {
     "textures": "zinc_ore"
