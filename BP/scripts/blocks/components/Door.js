@@ -7,7 +7,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
             if (!upper_block.isAir) {
                 e.cancel = true;
                 return;
-            }
+            };
             const dir = e.permutationToPlace.getState("minecraft:cardinal_direction");
             const hinge = getHinge(e.player, dir);
             upper_block.setPermutation(
@@ -23,15 +23,15 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
                 dimension.runCommandAsync(`setblock ${x} ${y} ${z} air destroy`);
                 if (destroyedBlockPermutation.getState("create:open")) {
                     dimension.getEntitiesAtBlockLocation(block.location)[0].remove();
-                }
+                };
             } else {
                 const below = block.below();
                 const { x, y, z } = below;
                 dimension.runCommandAsync(`setblock ${x} ${y} ${z} air destroy`);
                 if (destroyedBlockPermutation.getState("create:open")) {
                     dimension.getEntitiesAtBlockLocation(below)[0].remove();
-                }
-            }
+                };
+            };
         },
         onPlayerInteract: (e) => {
             const block2 = e.block.hasTag("upper_door") ? e.block.below() : e.block.above();
@@ -57,7 +57,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
                     if (entity.getProperty("create:open") === false) {
                         e.block.setPermutation(e.block.permutation.withState("create:open", false));
                         block2.setPermutation(block2.permutation.withState("create:open", false));
-                        world.playSound("close.iron_door", e.block.location);
+                        e.dimension.playSound("close.iron_door", e.block.location, {pitch: Math.random() / 10 + 0.90});
                         system.runTimeout(() => {
                             entity.remove();
                         }, 1);
@@ -100,16 +100,16 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
                                     bottom.setPermutation(
                                         bottom.permutation.withState("create:open", false)
                                     );
-                                    world.playSound("close.iron_door", top.location);
+                                    e.dimension.playSound("close.iron_door", top.location, {pitch: Math.random() / 10 + 0.90});
                                     system.runTimeout(() => {
                                         entity2.remove();
                                     }, 1);
                                 }
                             }, 7);
-                        }
-                    }
-                }
-            }
+                        };
+                    };
+                };
+            };
         },
     });
 });
@@ -138,8 +138,8 @@ function getN(string, location, bool) {
             return { x: location.x - val, y: location.y, z: location.z };
         default:
             return { x: location.x + val, y: location.y, z: location.z };
-    }
-}
+    };
+};
 
 function getHinge(player, direction) {
     switch (direction) {
@@ -148,24 +148,24 @@ function getHinge(player, direction) {
                 return "left";
             } else {
                 return "right";
-            }
+            };
         case "west":
             if (player.getViewDirection().z > 0) {
                 return "left";
             } else {
                 return "right";
-            }
+            };
         case "east":
             if (player.getViewDirection().z < 0) {
                 return "left";
             } else {
                 return "right";
-            }
+            };
         default:
             if (player.getViewDirection().x > 0) {
                 return "left";
             } else {
                 return "right";
-            }
-    }
-}
+            };
+    };
+};
