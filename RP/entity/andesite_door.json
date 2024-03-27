@@ -4,7 +4,7 @@
         "description": {
             "identifier": "create:andesite_door",
             "materials": {
-                "default": "entity_alphatest_one_sided"
+                "default": "andesite_door"
             },
             "geometry": {
                 "default": "geometry.door_flap"

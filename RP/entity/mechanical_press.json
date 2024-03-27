@@ -1,10 +1,10 @@
 {
-    "format_version": "1.20.60",
+    "format_version": "1.20.80",
     "minecraft:client_entity": {
         "description": {
             "identifier": "create:mechanical_press",
             "materials": {
-                "default": "moving_block"
+                "default": "mechanical_press"
             },
             "geometry": {
                 "default": "geometry.mechanical_press_head"
