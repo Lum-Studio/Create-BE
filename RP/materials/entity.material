@@ -1,0 +1,116 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "kinetic_block_entity_base": {
+      "vertexShader": "shaders/renderchunk.vertex",
+      "vrGeometryShader": "shaders/renderchunk.geometry",
+      "+defines": [
+        "LOW_PRECISION",
+        "TEXEL_AA"
+      ],
+      "+states": [],
+      "samplerStates": [
+        {
+          "samplerIndex": 0,
+          "textureFilter": "TexelAA"
+        }
+      ],
+      "vertexFields": [
+        {
+          "field": "Position"
+        },
+        {
+          "field": "Color"
+        },
+        {
+          "field": "UV0"
+        }
+      ],
+      "msaaSupport": "Both"
+    },
+    "kinetic_block_entity_opaque:kinetic_block_entity_base": {
+      "+variants": [
+        {
+          "underlava": {
+            "+states": [
+              "DisableCulling"
+            ]
+          }
+        }
+      ]
+    },
+    "kinetic_block_entity_moving": {
+      "vertexShader": "shaders/renderchunk.vertex",
+      "vrGeometryShader": "shaders/renderchunk.geometry",
+      "+defines": [
+        "LOW_PRECISION",
+        "TEXEL_AA",
+        "ATLAS_TEXTURE",
+        "AS_ENTITY_RENDERER"
+      ],
+      "+samplerStates": [
+        {
+          "samplerIndex": 0,
+          "textureFilter": "TexelAA"
+        },
+        {
+          "samplerIndex": 1,
+          "textureFilter": "Bilinear"
+        }
+      ],
+      "vertexFields": [
+        {
+          "field": "Position"
+        },
+        {
+          "field": "Color"
+        },
+        {
+          "field": "UV1"
+        },
+        {
+          "field": "UV0"
+        }
+      ],
+      "variants": [
+        {
+          "skinning": {
+            "+defines": [
+              "USE_SKINNING"
+            ],
+            "vertexFields": [
+              {
+                "field": "Position"
+              },
+              {
+                "field": "BoneId0"
+              },
+              {
+                "field": "Color"
+              },
+              {
+                "field": "UV1"
+              },
+              {
+                "field": "UV0"
+              }
+            ]
+          }
+        }
+      ],
+      "msaaSupport": "Both"
+    },
+    "kinetic_block_entity_moving_alpha_single_sided:kinetic_block_entity_opaque": {
+      "+defines": [
+        "ALPHA_TEST"
+      ],
+      "+states": [
+        "EnableAlphaToCoverage"
+      ]
+    },
+    "cogwheel:kinetic_block_entity_opaque": {},
+    "hand_crank:kinetic_block_entity_opaque": {},
+    "mechanical_press:kinetic_block_entity_moving": {},
+    "andesite_door:kinetic_block_entity_moving_alpha_single_sided": {}
+  }
+}

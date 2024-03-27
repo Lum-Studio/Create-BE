@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "create:brass_door",
+      "materials": {
+        "default": "andesite_door"
+      },
+      "geometry": {
+        "default": "geometry.door_slide"
+      },
+      "textures": {
+        "default": "textures/blocks/brass_door"
+      },
+      "render_controllers": ["controller.render.cow"],
+      "animations": {
+        "placement_direction": "animation.cardinal_direction",
+        "slide": "animation.door.slide"
+      },
+      "scripts": {
+        "animate": ["placement_direction", "slide"],
+        "initialize": ["variable.partial_ticks = 0;"],
+        "pre_animation": [
+          "variable.partial_ticks = math.clamp(query.property('create:open') ? v.partial_ticks + q.delta_time * 3 : v.partial_ticks - q.delta_time * 3, 0, 1);"
+        ]
+      },
+      "enable_attachables": false
+    }
+  }
+}

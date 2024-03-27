@@ -1,150 +1,153 @@
 {
    "resource_pack_name" : "create",
    "texture_data": {
-      "andesite_alloy": {
-         "textures": "textures/items/andesite_alloy"
-      },
-      "andesite_door": {
-         "textures": "textures/items/andesite_door"
-      },
-      "belt_connector": {
-         "textures": "textures/items/belt_connector"
-      },
-      "blaze_cake": {
-         "textures": "textures/items/blaze_cake"
-      },
-      "blaze_cake_base": {
-         "textures": "textures/items/blaze_cake_base"
-      },
-      "brass_ingot": {
-         "textures": "textures/items/brass_ingot"
-      },
-      "brass_nugget": {
-         "textures": "textures/items/brass_nugget"
-      },
-      "brass_sheet": {
-         "textures": "textures/items/brass_sheet"
-      },
-      "builders_tea": {
-         "textures": "textures/items/builders_tea"
-      },
-      "cinder_flour": {
-         "textures": "textures/items/cinder_flour"
-      },
-      "copper_door": {
-         "textures": "textures/items/copper_door"
-      },
-      "copper_ingot": {
-         "textures": "textures/items/copper_ingot"
-      },
-      "copper_nugget": {
-         "textures": "textures/items/copper_nugget"
-      },
-      "copper_sheet": {
-         "textures": "textures/items/copper_sheet"
-      },
-      "crushed_raw_aluminum": {
-         "textures": "textures/items/crushed_ore/crushed_raw_aluminum"
-      },
-      "crushed_raw_copper": {
-         "textures": "textures/items/crushed_ore/crushed_raw_copper"
-      },
-      "crushed_raw_gold": {
-         "textures": "textures/items/crushed_ore/crushed_raw_gold"
-      },
-      "crushed_raw_iron": {
-         "textures": "textures/items/crushed_ore/crushed_raw_iron"
-      },
-      "crushed_raw_lead": {
-         "textures": "textures/items/crushed_ore/crushed_raw_lead"
-      },
-      "crushed_raw_nickel": {
-         "textures": "textures/items/crushed_ore/crushed_raw_nickel"
-      },
-      "crushed_raw_osmium": {
-         "textures": "textures/items/crushed_ore/crushed_raw_osmium"
-      },
-      "crushed_raw_platinum": {
-         "textures": "textures/items/crushed_ore/crushed_raw_platinum"
-      },
-      "crushed_raw_quicksilver": {
-         "textures": "textures/items/crushed_ore/crushed_raw_quicksilver"
-      },
-      "crushed_raw_silver": {
-         "textures": "textures/items/crushed_ore/crushed_raw_silver"
-      },
-      "crushed_raw_tin": {
-         "textures": "textures/items/crushed_ore/crushed_raw_tin"
-      },
-      "crushed_raw_uranium": {
-         "textures": "textures/items/crushed_ore/crushed_raw_uranium"
-      },
-      "crushed_raw_zinc": {
-         "textures": "textures/items/crushed_ore/crushed_raw_zinc"
-      },
-      "dough": {
-         "textures": "textures/items/dough"
-      },
-      "electron_tube": {
-         "textures": "textures/items/electron_tube"
-      },
-      "experience_nugget": {
-         "textures": "textures/items/experience_nugget"
-      },
-      "glass_door": {
-         "textures": "textures/items/glass_door"
-      },
-      "golden_sheet": {
-         "textures": "textures/items/golden_sheet"
-      },
-      "honey_bucket": {
-         "textures": "textures/items/honey_bucket"
-      },
-      "honeyed_apple": {
-         "textures": "textures/items/honeyed_apple"
-      },
-      "iron_sheet": {
-         "textures": "textures/items/iron_sheet"
-      },
-      "lapis_sheet": {
-         "textures": "textures/items/lapis_sheet"
-      },
-      "polished_rose_quartz": {
-         "textures": "textures/items/polished_rose_quartz"
-      },
-      "propeller": {
-         "textures": "textures/items/propeller"
-      },
-      "raw_zinc": {
-         "textures": "textures/items/raw_zinc"
-      },
-      "red_sand_paper": {
-         "textures": "textures/items/red_sand_paper"
-      },
-      "refined_radiance": {
-         "textures": "textures/items/refined_radiance"
-      },
-      "sand_paper": {
-         "textures": "textures/items/sand_paper"
-      },
-      "super_glue": {
-         "textures": "textures/items/super_glue"
-      },
-      "wheat_flour": {
-         "textures": "textures/items/wheat_flour"
-      },
-      "whisk": {
-         "textures": "textures/items/whisk"
-      },
-      "wrench": {
-         "textures": "textures/items/wrench"
-      },
-      "zinc_ingot": {
-         "textures": "textures/items/zinc_ingot"
-      },
-      "zinc_nugget": {
-         "textures": "textures/items/zinc_nugget"
-      }
+     "andesite_alloy": {
+       "textures": "textures/items/andesite_alloy"
+     },
+     "andesite_door": {
+       "textures": "textures/items/andesite_door"
+     },
+     "belt_connector": {
+       "textures": "textures/items/belt_connector"
+     },
+     "blaze_cake": {
+       "textures": "textures/items/blaze_cake"
+     },
+     "blaze_cake_base": {
+       "textures": "textures/items/blaze_cake_base"
+     },
+     "brass_door": {
+       "textures": "textures/items/brass_door"
+     },
+     "brass_ingot": {
+       "textures": "textures/items/brass_ingot"
+     },
+     "brass_nugget": {
+       "textures": "textures/items/brass_nugget"
+     },
+     "brass_sheet": {
+       "textures": "textures/items/brass_sheet"
+     },
+     "builders_tea": {
+       "textures": "textures/items/builders_tea"
+     },
+     "cinder_flour": {
+       "textures": "textures/items/cinder_flour"
+     },
+     "copper_door": {
+       "textures": "textures/items/copper_door"
+     },
+     "copper_ingot": {
+       "textures": "textures/items/copper_ingot"
+     },
+     "copper_nugget": {
+       "textures": "textures/items/copper_nugget"
+     },
+     "copper_sheet": {
+       "textures": "textures/items/copper_sheet"
+     },
+     "crushed_raw_aluminum": {
+       "textures": "textures/items/crushed_ore/crushed_raw_aluminum"
+     },
+     "crushed_raw_copper": {
+       "textures": "textures/items/crushed_ore/crushed_raw_copper"
+     },
+     "crushed_raw_gold": {
+       "textures": "textures/items/crushed_ore/crushed_raw_gold"
+     },
+     "crushed_raw_iron": {
+       "textures": "textures/items/crushed_ore/crushed_raw_iron"
+     },
+     "crushed_raw_lead": {
+       "textures": "textures/items/crushed_ore/crushed_raw_lead"
+     },
+     "crushed_raw_nickel": {
+       "textures": "textures/items/crushed_ore/crushed_raw_nickel"
+     },
+     "crushed_raw_osmium": {
+       "textures": "textures/items/crushed_ore/crushed_raw_osmium"
+     },
+     "crushed_raw_platinum": {
+       "textures": "textures/items/crushed_ore/crushed_raw_platinum"
+     },
+     "crushed_raw_quicksilver": {
+       "textures": "textures/items/crushed_ore/crushed_raw_quicksilver"
+     },
+     "crushed_raw_silver": {
+       "textures": "textures/items/crushed_ore/crushed_raw_silver"
+     },
+     "crushed_raw_tin": {
+       "textures": "textures/items/crushed_ore/crushed_raw_tin"
+     },
+     "crushed_raw_uranium": {
+       "textures": "textures/items/crushed_ore/crushed_raw_uranium"
+     },
+     "crushed_raw_zinc": {
+       "textures": "textures/items/crushed_ore/crushed_raw_zinc"
+     },
+     "dough": {
+       "textures": "textures/items/dough"
+     },
+     "electron_tube": {
+       "textures": "textures/items/electron_tube"
+     },
+     "experience_nugget": {
+       "textures": "textures/items/experience_nugget"
+     },
+     "glass_door": {
+       "textures": "textures/items/glass_door"
+     },
+     "golden_sheet": {
+       "textures": "textures/items/golden_sheet"
+     },
+     "honey_bucket": {
+       "textures": "textures/items/honey_bucket"
+     },
+     "honeyed_apple": {
+       "textures": "textures/items/honeyed_apple"
+     },
+     "iron_sheet": {
+       "textures": "textures/items/iron_sheet"
+     },
+     "lapis_sheet": {
+       "textures": "textures/items/lapis_sheet"
+     },
+     "polished_rose_quartz": {
+       "textures": "textures/items/polished_rose_quartz"
+     },
+     "propeller": {
+       "textures": "textures/items/propeller"
+     },
+     "raw_zinc": {
+       "textures": "textures/items/raw_zinc"
+     },
+     "red_sand_paper": {
+       "textures": "textures/items/red_sand_paper"
+     },
+     "refined_radiance": {
+       "textures": "textures/items/refined_radiance"
+     },
+     "sand_paper": {
+       "textures": "textures/items/sand_paper"
+     },
+     "super_glue": {
+       "textures": "textures/items/super_glue"
+     },
+     "wheat_flour": {
+       "textures": "textures/items/wheat_flour"
+     },
+     "whisk": {
+       "textures": "textures/items/whisk"
+     },
+     "wrench": {
+       "textures": "textures/items/wrench"
+     },
+     "zinc_ingot": {
+       "textures": "textures/items/zinc_ingot"
+     },
+     "zinc_nugget": {
+       "textures": "textures/items/zinc_nugget"
+     }
    },
    "texture_name" : "atlas.items"
 }

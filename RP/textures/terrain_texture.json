@@ -5,11 +5,17 @@
     "andesite_casing": {
       "textures": "textures/blocks/andesite_casing"
     },
+    "andesite_casing_short": {
+      "textures": "textures/blocks/andesite_casing_short"
+    },
     "andesite_door": {
       "textures": "textures/blocks/andesite_door"
     },
     "axis": {
       "textures": "textures/blocks/axis"
+    },
+    "brass_door": {
+      "textures": "textures/blocks/brass_door"
     },
     "cogwheel": {
       "textures": "textures/blocks/cogwheel"
@@ -53,7 +59,7 @@
     "mechanical_press_axis": {
       "textures": "textures/blocks/mechanical_press/mechanical_press_axis"
     },
-    "mechanical_press_bottom" : {
+    "mechanical_press_bottom": {
       "textures": "textures/blocks/mechanical_press/mechanical_press_bottom"
     },
     "mechanical_press_head": {
@@ -62,11 +68,14 @@
     "mechanical_press_pole": {
       "textures": "textures/blocks/mechanical_press/mechanical_press_pole"
     },
-    "mechanical_press_side" : {
+    "mechanical_press_side": {
       "textures": "textures/blocks/mechanical_press/mechanical_press_side"
     },
-    "mechanical_press_top" : {
+    "mechanical_press_top": {
       "textures": "textures/blocks/mechanical_press/mechanical_press_top"
+    },
+    "smooth_dark_log_top": {
+      "textures": "textures/blocks/smooth_dark_log_top"
     },
     "zinc_ore": {
       "textures": "textures/blocks/zinc_ore"
