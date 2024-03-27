@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.41",
+	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
 			"identifier": "create:air_flow",
@@ -10,7 +10,7 @@
 		},
 		"events": {
 			"track": {
-				"expression": "variable.distance += 1"
+				"expression": "variable.distance + 1;"
 			}
 		},
 		"components": {
@@ -39,7 +39,7 @@
 			},
 			"minecraft:particle_lifetime_expression": {
 				"max_lifetime": 40,
-				"expiration_expression": "variable.distance === 7"
+				"expiration_expression": "variable.distance == 7;"
 			},
 			"minecraft:particle_initial_speed": 3,
 			"minecraft:particle_motion_dynamic": {},

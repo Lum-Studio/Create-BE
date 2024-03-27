@@ -1,0 +1,94 @@
+{
+  "format_version": "1.20.70",
+  "minecraft:block": {
+    "description": {
+      "identifier": "create:hand_crank",
+      "menu_category": {
+        "category": "items"
+      },
+      "states": {
+        "create:placed": [false, true],
+        "create:placing_axis": [0, 1, 2]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('create:placing_axis') == 0 ",
+        "components": { "tag:axis:y": {} }
+      },
+      {
+        "condition": "query.block_state('create:placing_axis') == 1",
+        "components": { "tag:axis:z": {}, "minecraft:transformation": { "rotation": [90, 0, 0] } }
+      },
+      {
+        "condition": "query.block_state('create:placing_axis') == 2",
+        "components": { "tag:axis:x": {}, "minecraft:transformation": { "rotation": [90, 90, 0] } }
+      },
+      {
+        "condition": "query.block_state('create:placed')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "stripped_spruce_log_top",
+              "render_method": "alpha_test"
+            },
+            "axis": {
+              "texture": "invisible",
+              "render_method": "alpha_test_single_sided"
+            },
+            "andesite_casing_short": {
+              "texture": "invisible",
+              "render_method": "alpha_test_single_sided"
+            },
+            "smooth_dark_log_top": {
+              "texture": "invisible",
+              "render_method": "alpha_test_single_sided"
+            }
+          }
+        }
+      }
+    ],
+    "components": {
+      "minecraft:custom_components": ["create:tile_entity", "create:placed"],
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "cogwheel",
+          "render_method": "alpha_test_single_sided"
+        },
+        "axis": {
+          "texture": "axis",
+          "render_method": "alpha_test_single_sided"
+        },
+        "andesite_casing_short": {
+          "texture": "andesite_casing_short",
+          "render_method": "alpha_test_single_sided"
+        },
+        "smooth_dark_log_top": {
+          "texture": "smooth_dark_log_top",
+          "render_method": "alpha_test_single_sided"
+        }
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 6
+      },
+      "tag:stone": {},
+      "minecraft:destructible_by_mining": { "seconds_to_destroy": 8 },
+      "minecraft:geometry": {
+        "identifier": "geometry.hand_crank",
+        "bone_visibility": {
+          "main": "!query.block_state('create:placed')",
+          "placed": "query.block_state('create:placed')"
+        }
+      },
+      "minecraft:collision_box": {
+        "origin": [-8, 0, -8],
+        "size": [16, 6, 16]
+      },
+      "minecraft:selection_box": {
+        "origin": [-8, 0, -8],
+        "size": [16, 8, 16]
+      },
+      "minecraft:flammable": false
+    }
+  }
+}
