@@ -4,7 +4,7 @@
         "description": {
             "identifier": "create:glass_door",
             "materials": {
-                "default": "moving_block_alpha_single_side"
+                "default": "entity_alphatest_one_sided"
             },
             "geometry": {
                 "default": "geometry.door_slide"
@@ -12,21 +12,14 @@
             "textures": {
                 "default": "textures/blocks/glass_door"
             },
-            "render_controllers": [
-                "controller.render.cow"
-            ],
+            "render_controllers": ["controller.render.cow"],
             "animations": {
                 "placement_direction": "animation.cardinal_direction",
                 "slide": "animation.door.slide"
             },
             "scripts": {
-                "animate": [
-                    "placement_direction",
-                    "slide"
-                ],
-                "initialize": [
-                    "variable.partial_ticks = 0;"
-                ],
+                "animate": ["placement_direction", "slide"],
+                "initialize": ["variable.partial_ticks = 0;"],
                 "pre_animation": [
                     "variable.partial_ticks = math.clamp(query.property('create:open') ? v.partial_ticks + q.delta_time * 3 : v.partial_ticks - q.delta_time * 3, 0, 1);"
                 ]

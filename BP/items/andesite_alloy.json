@@ -1,18 +1,24 @@
 {
-    "format_version": "1.20.60",
+    "format_version": "1.19.50",
     "minecraft:item": {
         "description": {
-            "identifier": "create:andesite_alloy",
-            "menu_category": {
-                "category": "items"
-            }
+            "identifier": "create:andesite_alloy"
         },
         "components": {
+            "minecraft:creative_category": {
+                "category": "items"
+            },
             "minecraft:icon": {
-                "textures": { 
-                    "default": "andesite_alloy" 
+                "texture": "andesite_alloy"
+            },
+            "minecraft:on_use_on": {
+                "on_use_on": {
+                    "event": "create:idle"
                 }
             }
+        },
+        "events": {
+            "create:idle": {}
         }
     }
 }

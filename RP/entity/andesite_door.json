@@ -4,7 +4,7 @@
         "description": {
             "identifier": "create:andesite_door",
             "materials": {
-                "default": "moving_block_alpha_single_side"
+                "default": "entity_alphatest_one_sided"
             },
             "geometry": {
                 "default": "geometry.door_flap"
@@ -12,21 +12,14 @@
             "textures": {
                 "default": "textures/blocks/andesite_door"
             },
-            "render_controllers": [
-                "controller.render.door_flap"
-            ],
+            "render_controllers": ["controller.render.door_flap"],
             "animations": {
                 "placement_direction": "animation.cardinal_direction",
                 "flap": "animation.door.flap"
             },
             "scripts": {
-                "animate": [
-                    "placement_direction",
-                    "flap"
-                ],
-                "initialize": [
-                    "variable.partial_ticks = 0;"
-                ],
+                "animate": ["placement_direction", "flap"],
+                "initialize": ["variable.partial_ticks = 0;"],
                 "pre_animation": [
                     "variable.partial_ticks = math.clamp(query.property('create:open') ? v.partial_ticks + q.delta_time * 3 : v.partial_ticks - q.delta_time * 3, 0, 1);"
                 ]
