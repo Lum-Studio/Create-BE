@@ -109,7 +109,7 @@
             },
             "minecraft:material_instances": {
                 "*": {
-                    "texture": "brass_door",
+                    "texture": "brass_casing",
                     "render_method": "alpha_test_single_sided",
                     "ambient_occlusion": false
                 },
