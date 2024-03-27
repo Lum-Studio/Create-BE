@@ -17,6 +17,9 @@
     "brass_door": {
       "textures": "textures/blocks/brass_door"
     },
+    "brass_casing": {
+      "textures": "textures/blocks/brass_casing"
+    },
     "cogwheel": {
       "textures": "textures/blocks/cogwheel"
     },
