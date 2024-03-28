@@ -49,6 +49,7 @@ item.create:zinc_nugget=Zinc Nugget
 
 tile.create:andesite_casing.name=Andesite Casing
 tile.create:cogwheel.name=Cogwheel
+tile.create:large_cogwheel.name=Large Cogwheel
 tile.create:creative_motor.name=Creative Motor
 tile.create:hand_crank.name=Hand Crank
 tile.create:mechanical_press.name=Mechanical Press

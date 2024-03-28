@@ -1,0 +1,27 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "create:large_cogwheel",
+      "materials": {
+        "default": "cogwheel"
+      },
+      "geometry": {
+        "default": "geometry.tile.large_cogwheel"
+      },
+      "textures": {
+        "default": "textures/entity/large_cogwheel"
+      },
+      "render_controllers": ["controller.render.cow"],
+      "animations": {
+        "position": "animation.tile_entity.position",
+        "placement_axis": "animation.shaft.rotation",
+        "rotation": "animation.kinetic_block_entity.rotation"
+      },
+      "scripts": {
+        "animate": ["position", "placement_axis", "rotation"]
+      },
+      "enable_attachables": false
+    }
+  }
+}
