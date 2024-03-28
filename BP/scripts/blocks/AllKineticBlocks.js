@@ -3,7 +3,7 @@ import Cogwheel from "./Cogwheel";
 import MechanicalPress from "./MechanicalPress";
 import KineticBlockEntity from "./base/KineticBlockEntity";
 
-export const AllKineticBlocks = {
+const AllKineticBlocks = {
     "create:creative_motor": {
         class : GeneratingKineticBlockEntity,
         capacity: 16384,
@@ -24,4 +24,35 @@ export const AllKineticBlocks = {
         capacity: 0,
         stress: 0
     }
+};
+
+export default class KineticStats {
+
+    static getStress(typeId) {
+        if (AllKineticBlocks[typeId] === undefined) return 0;
+        return AllKineticBlocks[typeId];
+    };
+
+    static getClass(typeId) {
+        return AllKineticBlocks[typeId].class;
+    };
+
+    static getcapacity(typeId) {
+        if (AllKineticBlocks[typeId] === undefined) return 0;
+        return AllKineticBlocks[typeId].capacity;
+    };
+
+    static hasCapacity(typeId) {
+        if (AllKineticBlocks[typeId] === undefined) return false;
+        return AllKineticBlocks[typeId].capacity !== 0;
+    };
+
+    static hasStress(typeId) {
+        if (AllKineticBlocks[typeId] === undefined) return false;
+        return AllKineticBlocks[typeId].stress !== 0;
+    };
+
+    static hasStats(typeId) {
+        return AllKineticBlocks[typeId] !== undefined;
+    };
 };
