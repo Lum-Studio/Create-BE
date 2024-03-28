@@ -6,13 +6,12 @@ import EncasedFan from "../EncasedFan";
 import ValveHandle from "../cranks/ValveHandle";
 import HandCrank from "../cranks/HandCrank";
 import MechanicalPress from "../MechanicalPress";
+import { AllKineticBlocks } from "../AllKineticBlocks";
 
 world.beforeEvents.worldInitialize.subscribe((initEvent) => {
   initEvent.blockTypeRegistry.registerCustomComponent("create:tile_entity", {
     beforeOnPlayerPlace: (e) => {
       const { block, dimension } = e;
-      // I am sure their are more that don't have tile entities
-      if (block.typeId === "create:andesite_casing") return;
       dimension.spawnEntity(e.permutationToPlace.type.id, block.center());
     },
 
@@ -36,32 +35,16 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
 
 world.afterEvents.entitySpawn.subscribe(({ entity }) => {
   const { dimension, location, typeId } = entity;
+  if (AllKineticBlocks[typeId] === undefined) return;
   let block = dimension.getBlock(location);
-  switch (typeId) {
-    case "create:cogwheel":
-      KineticInstances.add(dimension, block.location, new Cogwheel(entity));
-      break;
+  KineticInstances.add(dimension, block.location, new AllKineticBlocks[block.typeId].class(entity));
+});
 
-    case "create:encased_fan":
-      KineticInstances.add(dimension, block.location, new EncasedFan(entity));
-      break;
-
-    case "create:valve_handle":
-      KineticInstances.add(dimension, block.location, new ValveHandle(entity));
-      break;
-
-    case "create:hand_crank":
-      KineticInstances.add(dimension, block.location, new HandCrank(entity));
-      break;
-
-    case "create:mechanical_mixer":
-      KineticInstances.add(dimension, block.location, new MechanicalMixer(entity));
-      break;
-
-    case "create:mechanical_press":
-      KineticInstances.add(dimension, block.location, new MechanicalPress(entity));
-      break;
-  }
+world.afterEvents.entityLoad.subscribe(({ entity }) => {
+  const { dimension, location, typeId } = entity;
+  if (AllKineticBlocks[typeId] === undefined) return;
+  let block = dimension.getBlock(location);
+  KineticInstances.add(dimension, block.location, new AllKineticBlocks[block.typeId].class(entity));
 });
 
 //Attempt at non-pushable blocks <it destroys then on piston push> not working

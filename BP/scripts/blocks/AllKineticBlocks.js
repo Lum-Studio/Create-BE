@@ -3,7 +3,7 @@ import Cogwheel from "./Cogwheel";
 import MechanicalPress from "./MechanicalPress";
 import KineticBlockEntity from "./base/KineticBlockEntity";
 
-export default {
+export const AllKineticBlocks = {
     "create:creative_motor": {
         class : GeneratingKineticBlockEntity,
         capacity: 16384,

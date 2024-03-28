@@ -29,6 +29,10 @@ function printData(sender) {
         sender.sendMessage("§cNot a kineticblock§f");
         return;
     };
-    let data = `§bSpeed: §6${be.speed}, §bNetwork: §6${be.network}, §bStress: §6${0}, §bSource: §6${JSON.stringify(block.location)}§f`;
+    let data = `${be.block.location.x}, ${be.block.location.y}, ${
+      be.block.location.z
+    } has the following block data: {§bSpeed: §6${be.speed}, §bNetwork: §6${
+      be.network
+    }, §bStress: §6${be.stress}, §bCapacity: §6${be.capacity}, §bSource: §6${JSON.stringify(block.location)}§f}`;
     sender.sendMessage(data);
 }
