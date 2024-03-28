@@ -24,7 +24,7 @@ export default class GoggleOverlayRender {
     const helmetItem = this.player.getComponent("equippable").getEquipment(EquipmentSlot.Head);
     if (helmetItem?.typeId === "create:goggles" && block?.typeId.startsWith("create:")) {
       const kI = KineticInstances.get(block.dimension, block.location);
-      if (kI.getDisplayInfo !== undefined) {
+      if (kI.getDisplayInfo() != undefined) {
         const { title, text, text2 } = kI.getDisplayInfo();
         this.player.onScreenDisplay.setActionBar({
           rawtext: [{ translate: `${title}` }, { translate: `${text}` }, { translate: `${text2}` }],

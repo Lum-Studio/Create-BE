@@ -3,6 +3,7 @@ import Cogwheel from "./Cogwheel";
 import MechanicalPress from "./MechanicalPress";
 import KineticBlockEntity from "./base/KineticBlockEntity";
 import LargeCogwheel from "./LargeCogwheel";
+import HandCrank from "./cranks/HandCrank";
 
 const AllKineticBlocks = {
   "create:creative_motor": {
@@ -12,6 +13,11 @@ const AllKineticBlocks = {
   },
   "create:cogwheel": {
     class: Cogwheel,
+    capacity: 0,
+    stress: 0,
+  },
+  "create:hand_crank": {
+    class: HandCrank,
     capacity: 0,
     stress: 0,
   },

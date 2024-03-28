@@ -55,7 +55,7 @@
     "anchor_from": "center",
     "offset": ["91px", 0],
     "texture": "textures/ui/purpleBorder",
-    "alpha": 0.8,
+    "alpha": 0.9,
     "controls": [
       {
         "actionbar_message": {

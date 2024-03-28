@@ -66,13 +66,7 @@ export default class KineticBlockEntity {
 
   // Method for child classes to implement
   getDisplayInfo() {
-    const information = {
-      title: "Kinetic Stats",
-      text: "\n§7Kinetic Stress Impact:",
-      // I know it isn't correct
-      text2: `\n §b${Math.abs(this.speed) * 32}su §8at current speed`,
-    };
-    return information;
+    return undefined;
   }
 
   getSpeed() {
