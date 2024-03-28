@@ -1,11 +1,5 @@
-import { world, system } from "@minecraft/server";
-import Cogwheel from "../Cogwheel";
-import MechanicalMixer from "../Cogwheel";
+import { world } from "@minecraft/server";
 import KineticInstances from "../KineticInstances";
-import EncasedFan from "../EncasedFan";
-import ValveHandle from "../cranks/ValveHandle";
-import HandCrank from "../cranks/HandCrank";
-import MechanicalPress from "../MechanicalPress";
 import KineticStats from "../AllKineticBlocks";
 
 world.beforeEvents.worldInitialize.subscribe((initEvent) => {
@@ -13,7 +7,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
     beforeOnPlayerPlace: (e) => {
       const entity = e.dimension.spawnEntity(e.permutationToPlace.type.id, e.block.center());
       const classType = KineticStats.getClass(e.permutationToPlace.type.id);
-      const ki = new classType(e.block, entity)
+      const ki = new classType(entity)
       ki.initialize();
       KineticInstances.add(e.dimension, e.block.location, ki);
     },
@@ -40,7 +34,7 @@ world.afterEvents.entityLoad.subscribe(({entity}) => {
   if (KineticStats.hasStats(entity.typeId)) {
     let block = entity.dimension.getBlock(entity.location);
     const classType = KineticStats.getClass(block.typeId);
-    KineticInstances.add(entity.dimension, block.location, new classType(block, entity));
+    KineticInstances.add(entity.dimension, block.location, new classType(entity));
   };
 });
 

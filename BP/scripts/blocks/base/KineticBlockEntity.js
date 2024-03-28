@@ -24,7 +24,6 @@ export default class KineticBlockEntity {
     this.lastCapacityProvided = 0;
     this.networkSize = 0;
     this.network = KineticNetwork.generateID();
-    this.initialize();
     system.runInterval(() => this.tick());
   }
 
