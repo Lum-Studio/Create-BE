@@ -1,21 +1,24 @@
 import { world } from "@minecraft/server";
 import KineticInstances from "../blocks/KineticInstances";
 
-world.afterEvents.chatSend.subscribe(({sender, message}) => {
-    if (message.startsWith("!")) {
-        switch(message) {
+world.beforeEvents.chatSend.subscribe(e => {
+    if (e.message.startsWith("!")) {
+        switch(e.message) {
             // debug tools didnt work with beforeevents
             case "!clear tile entities":
-                for (const entity of sender.dimension.getEntities()) {
+                e.cancel = true;
+                for (const entity of e.sender.dimension.getEntities()) {
                     if (entity.typeId.startsWith("create:")) {
                         entity.remove();
                     };
                 };
                 break;
             case "!data get":
+                e.cancel = true;
                 printData(sender);
                 break
             case "!data get all":
+                e.cancel = true;
                 console.warn(KineticInstances.debugInstances());
                 break;
         }
@@ -29,10 +32,6 @@ function printData(sender) {
         sender.sendMessage("§cNot a kineticblock§f");
         return;
     };
-    let data = `${be.block.location.x}, ${be.block.location.y}, ${
-      be.block.location.z
-    } has the following block data: {§bSpeed: §6${be.speed}, §bNetwork: §6${
-      be.network
-    }, §bStress: §6${be.stress}, §bCapacity: §6${be.capacity}, §bSource: §6${JSON.stringify(block.location)}§f}`;
+    let data = `§bSpeed: §6${be.speed}, §bNetwork: §6${be.network}, §bStress: §6${0}, §bSource: §6${JSON.stringify(block.location)}§f`;
     sender.sendMessage(data);
 }
