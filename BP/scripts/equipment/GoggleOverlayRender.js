@@ -24,21 +24,20 @@ export default class GoggleOverlayRender {
     const helmetItem = this.player.getComponent("equippable").getEquipment(EquipmentSlot.Head);
     if (helmetItem?.typeId === "create:goggles" && block?.typeId.startsWith("create:")) {
       const kI = KineticInstances.get(block.dimension, block.location);
-      const { title, text, text2 } = kI.getDisplayInfo();
-      this.player.onScreenDisplay.setActionBar({
-        rawtext: [{ translate: `${title}` }, { translate: `${text}` }, { translate: `${text2}` }],
-      });
+      if (kI.getDisplayInfo !== undefined) {
+        const { title, text, text2 } = kI.getDisplayInfo();
+        this.player.onScreenDisplay.setActionBar({
+          rawtext: [{ translate: `${title}` }, { translate: `${text}` }, { translate: `${text2}` }],
+        });
+      }
     }
   }
 
   static makeProgressBar(length, filledLength, color) {
     let bar = " ";
     let emptySpaces = length - filledLength;
-    for (i = 0; i < filledLength; i++)
-      bar += "\u2588";
-    for (i = 0; i < emptySpaces; i++)
-      bar += "\u2592";
+    for (i = 0; i < filledLength; i++) bar += "\u2588";
+    for (i = 0; i < emptySpaces; i++) bar += "\u2592";
     return `${color}${bar}§r `;
   }
-
 }
